@@ -1,0 +1,14 @@
+##########################################
+Training private models on 'mnist' dataset!
+Training private models on 'MnistNetPate' architecture!
+Number of private models: 5
+Initial learning rate: 0.1.
+Number of epochs for training each model: 50
+##########################################
+Steps per epoch: 188
+loss: 0.04946587282593591 | acc: 98.6 | acc2: 0 | balanced_acc: 0.9858514447006128 | auc: 0.9999065821707963 | acc_detailed: [99.0816,99.7357,98.7403,99.0099,98.4725,98.7668,97.9123,98.0545,98.3573,
+ 97.7205] | map: 97.51257601951335 | model_name: model(1) | 
+##########################################
+elapsed time: 409.9148635864258
+
+##########################################

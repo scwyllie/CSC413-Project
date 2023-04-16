@@ -1,0 +1,14 @@
+##########################################
+Training private models on 'cifar10' dataset!
+Training private models on 'ResNet34' architecture!
+Number of private models: 5
+Initial learning rate: 0.1.
+Number of epochs for training each model: 100
+##########################################
+Steps per epoch: 157
+loss: 1.032061655074358 | acc: 81.9 | acc2: 0 | balanced_acc: 0.8175999482558625 | auc: 0.9818974979452018 | acc_detailed: [88.785 ,70.8333,66.    ,79.3103,87.9121,74.5098,90.1099,77.0642,87.5   ,
+ 95.5752] | map: 73.61106231928633 | model_name: model(1) | 
+##########################################
+elapsed time: 1178.317309141159
+
+##########################################

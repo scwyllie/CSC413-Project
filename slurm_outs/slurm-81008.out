@@ -1,0 +1,1422 @@
+###################################################################
+args: 
+adam_amsgrad :  False
+adaptive_batch_size :  1000
+apply_data_independent_bound :  False
+architectures :  ['MnistNetPate']
+attacker_dataset :  None
+batch_size :  64
+begin_id :  0
+budget :  10.0
+budgets :  [10.0]
+class_type :  multiclass
+commands :  ['train_private_models', 'basic_model_stealing_attack']
+cwd :  /h/321/scwyllie/model-extraction-iclr
+data_dir :  /h/321/scwyllie/random-extract/data
+dataset :  mnist
+dataset_type :  balanced
+debug :  False
+device_ids :  [0, 1]
+end_id :  1
+eval_batch_size :  1000
+label_reweight :  disable
+log_every_epoch :  0
+loss_type :  CE
+lr :  0.1
+lr_epochs :  [2]
+lr_factor :  0.1
+lr_mixmatch :  0.002
+mode :  random
+model_size :  small
+momentum :  0.5
+num_epochs :  50
+num_models :  1
+num_optimization_loop :  0
+num_querying_parties :  1
+num_workers :  0
+optimizer :  SGD
+path :  /h/321/scwyllie/random-extract
+patience :  None
+poisson_mechanism :  False
+query_set_type :  numpy
+querying_party_ids :  [0, 1, 2]
+retrain_extracted_model :  False
+schedule_factor :  0.1
+schedule_patience :  10
+scheduler_milestones :  None
+scheduler_type :  ReduceLROnPlateau
+seed :  111
+show_dp_budget :  apply
+shuffle_dataset :  False
+sigma_gnmax :  2.0
+sigma_gnmax_private_knn :  28.0
+sigma_threshold :  0.0
+sigmoid_op :  apply
+target_model :  victim
+test_models_type :  private
+threshold :  0.0
+timestamp :  2023-04-14-14-20-46-960595
+transfer_type :  
+useserver :  False
+verbose :  True
+weight_decay :  0.0001
+ARGS FINISHED
+######################################################
+architecture:  MnistNetPate
+num_models:  1
+args.private_model_path:  /h/321/scwyllie/random-extract/private-models/mnist/MnistNetPate/1-models
+args.retrained_private_models_path:  /h/321/scwyllie/random-extract/retrained-private-models/mnist/MnistNetPate/1-models/random
+got here
+Training private models
+is cuda: True
+device count 2
+current 0
+name NVIDIA GeForce RTX 2080 Ti
+##########################################
+Training private models on 'mnist' dataset!
+Training private models on 'MnistNetPate' architecture!
+Number of private models: 1
+Initial learning rate: 0.1.
+Number of epochs for training each model: 50
+Downloading http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz
+Downloading http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz to /h/321/scwyllie/random-extract/MNIST/MNIST/raw/train-images-idx3-ubyte.gz
+  0%|          | 0/9912422 [00:00<?, ?it/s] 35%|███▍      | 3440640/9912422 [00:00<00:00, 34337337.34it/s]100%|██████████| 9912422/9912422 [00:00<00:00, 61149204.81it/s]
+Extracting /h/321/scwyllie/random-extract/MNIST/MNIST/raw/train-images-idx3-ubyte.gz to /h/321/scwyllie/random-extract/MNIST/MNIST/raw
+
+Downloading http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz
+Downloading http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz to /h/321/scwyllie/random-extract/MNIST/MNIST/raw/train-labels-idx1-ubyte.gz
+  0%|          | 0/28881 [00:00<?, ?it/s]100%|██████████| 28881/28881 [00:00<00:00, 222267328.12it/s]
+Extracting /h/321/scwyllie/random-extract/MNIST/MNIST/raw/train-labels-idx1-ubyte.gz to /h/321/scwyllie/random-extract/MNIST/MNIST/raw
+
+Downloading http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz
+Downloading http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz to /h/321/scwyllie/random-extract/MNIST/MNIST/raw/t10k-images-idx3-ubyte.gz
+  0%|          | 0/1648877 [00:00<?, ?it/s]100%|██████████| 1648877/1648877 [00:00<00:00, 17895768.70it/s]
+Extracting /h/321/scwyllie/random-extract/MNIST/MNIST/raw/t10k-images-idx3-ubyte.gz to /h/321/scwyllie/random-extract/MNIST/MNIST/raw
+
+Downloading http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz
+Downloading http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz to /h/321/scwyllie/random-extract/MNIST/MNIST/raw/t10k-labels-idx1-ubyte.gz
+  0%|          | 0/4542 [00:00<?, ?it/s]100%|██████████| 4542/4542 [00:00<00:00, 39606088.91it/s]
+Extracting /h/321/scwyllie/random-extract/MNIST/MNIST/raw/t10k-labels-idx1-ubyte.gz to /h/321/scwyllie/random-extract/MNIST/MNIST/raw
+
+eval dataset:  <torch.utils.data.dataset.Subset object at 0x7fc0f702cc70>
+##########################################
+train dataset for model id: 0 <torch.utils.data.dataset.Subset object at 0x7fc0f7031a00>
+Steps per epoch: 938
+Using GPU
+Device ids: [0, 1]
+STARTED TRAINING
+Using GPU
+EPOCH:  0
+Using GPU
+EPOCH:  1
+Using GPU
+EPOCH:  2
+Using GPU
+EPOCH:  3
+Using GPU
+EPOCH:  4
+Using GPU
+EPOCH:  5
+Using GPU
+EPOCH:  6
+Using GPU
+EPOCH:  7
+Using GPU
+EPOCH:  8
+Using GPU
+EPOCH:  9
+Using GPU
+EPOCH:  10
+Using GPU
+EPOCH:  11
+Using GPU
+EPOCH:  12
+Using GPU
+EPOCH:  13
+Using GPU
+EPOCH:  14
+Using GPU
+EPOCH:  15
+Using GPU
+EPOCH:  16
+Using GPU
+EPOCH:  17
+Using GPU
+EPOCH:  18
+Using GPU
+EPOCH:  19
+Using GPU
+EPOCH:  20
+Using GPU
+EPOCH:  21
+Using GPU
+EPOCH:  22
+Using GPU
+EPOCH:  23
+Using GPU
+EPOCH:  24
+Using GPU
+EPOCH:  25
+Using GPU
+EPOCH:  26
+Using GPU
+EPOCH:  27
+Using GPU
+EPOCH:  28
+Using GPU
+EPOCH:  29
+Using GPU
+EPOCH:  30
+Using GPU
+EPOCH:  31
+Using GPU
+EPOCH:  32
+Using GPU
+EPOCH:  33
+Using GPU
+EPOCH:  34
+Using GPU
+EPOCH:  35
+Using GPU
+EPOCH:  36
+Using GPU
+EPOCH:  37
+Using GPU
+EPOCH:  38
+Using GPU
+EPOCH:  39
+Using GPU
+EPOCH:  40
+Using GPU
+EPOCH:  41
+Using GPU
+EPOCH:  42
+Using GPU
+EPOCH:  43
+Using GPU
+EPOCH:  44
+Using GPU
+EPOCH:  45
+Using GPU
+EPOCH:  46
+Using GPU
+EPOCH:  47
+Using GPU
+EPOCH:  48
+Using GPU
+EPOCH:  49
+Using GPU
+loss: 0.022019824577399875 | acc: 99.39 | acc2: 0 | balanced_acc: 0.9937885783364262 | auc: 0.9999724645522386 | acc_detailed: [ 99.6939,100.    , 99.3217, 99.604 , 99.1853, 99.1031, 99.1649, 99.1245,
+  99.384 , 99.2071] | map: 98.98268877973408 | model_name: model(1) | 
+##########################################
+elapsed time: 1223.6087975502014
+
+##########################################
+queries,accuracy,type,privacy
+queries,accuracy,type,privacy
+0,10,0,0
+0,10,0,0
+queries,type,entropy
+0,0,0
+queries,type,gap
+0,0,0
+queries,type,pknn
+0,0,0
+args.victim_model_path:  /h/321/scwyllie/random-extract/private-models/mnist/MnistNetPate/1-models
+Training adaptive model on 'mnist' dataset!
+Training adaptive model on 'MnistNetPate' architecture!
+Number of private models: 1
+Initial learning rate: 0.1.
+Number of epochs for training each model: 50
+eval dataset:  <torch.utils.data.dataset.Subset object at 0x7fc0f7031ac0>
+Label counts for eval set: [ 980, 1135, 1032, 1010,  982,  892,  958, 1028,  974, 1009].
+Class ratios for eval set: [ 9.8 , 11.35, 10.32, 10.1 ,  9.82,  8.92,  9.58, 10.28,  9.74, 10.09].
+Number of eval samples: 10000.
+Loaded stolen model
+Building ensemble model 'ensemble(all)'!
+Using GPU
+accuracy of victim: 99.39.
+There are 10000 unlabeled points in total.
+First iteration, no retraining
+entropy cost
+1000,random,0.7771190404891968
+gap cost
+1000,random,0.7069100141525269
+1000,random,0.6920666866810647
+entropy 2 cost
+1000,random,997.7454833984375
+Steps per epoch: 16.
+Using GPU
+STARTED TRAINING
+Using GPU
+EPOCH:  0
+Using GPU
+EPOCH:  1
+Using GPU
+EPOCH:  2
+Using GPU
+EPOCH:  3
+Using GPU
+EPOCH:  4
+Using GPU
+EPOCH:  5
+Using GPU
+EPOCH:  6
+Using GPU
+EPOCH:  7
+Using GPU
+EPOCH:  8
+Using GPU
+EPOCH:  9
+Using GPU
+EPOCH:  10
+Using GPU
+EPOCH:  11
+Using GPU
+EPOCH:  12
+Using GPU
+EPOCH:  13
+Using GPU
+EPOCH:  14
+Using GPU
+EPOCH:  15
+Using GPU
+EPOCH:  16
+Using GPU
+EPOCH:  17
+Using GPU
+EPOCH:  18
+Using GPU
+EPOCH:  19
+Using GPU
+EPOCH:  20
+Using GPU
+EPOCH:  21
+Using GPU
+EPOCH:  22
+Using GPU
+EPOCH:  23
+Using GPU
+EPOCH:  24
+Using GPU
+EPOCH:  25
+Using GPU
+EPOCH:  26
+Using GPU
+EPOCH:  27
+Using GPU
+EPOCH:  28
+Using GPU
+EPOCH:  29
+Using GPU
+EPOCH:  30
+Using GPU
+EPOCH:  31
+Using GPU
+EPOCH:  32
+Using GPU
+EPOCH:  33
+Using GPU
+EPOCH:  34
+Using GPU
+EPOCH:  35
+Using GPU
+EPOCH:  36
+Using GPU
+EPOCH:  37
+Using GPU
+EPOCH:  38
+Using GPU
+EPOCH:  39
+Using GPU
+EPOCH:  40
+Using GPU
+EPOCH:  41
+Using GPU
+EPOCH:  42
+Using GPU
+EPOCH:  43
+Using GPU
+EPOCH:  44
+Using GPU
+EPOCH:  45
+Using GPU
+EPOCH:  46
+Using GPU
+EPOCH:  47
+Using GPU
+EPOCH:  48
+Using GPU
+EPOCH:  49
+lr:0.1, bs:64, val_loss:1.3385371372198602, balanced acc:0.9370601743064381
+loss: 0.3067794064731883 | acc: 93.78 | acc2: 0 | balanced_acc: 0.9370601743064381 | auc: 0.997008587643671 | acc_detailed: [97.551 ,95.5066,93.5078,94.7525,94.9084,88.565 ,93.3194,92.8016,92.0945,
+ 94.0535] | map: 89.5381995864514 | 
+1000,93.78,random,0.6920666866810647
+best hyperparameters : lr 0.1, batch size 64
+time for querying 0.23093509674072266
+time for training 214.21242427825928
+1000,random,0.23093509674072266,214.21242427825928
+entropy cost
+2000,random,1.309058964252472
+gap cost
+2000,random,1.0821027159690857
+2000,random,0.9839240327367391
+entropy 2 cost
+2000,random,1995.5162353515625
+Steps per epoch: 32.
+Using GPU
+STARTED TRAINING
+Using GPU
+EPOCH:  0
+Using GPU
+EPOCH:  1
+Using GPU
+EPOCH:  2
+Using GPU
+EPOCH:  3
+Using GPU
+EPOCH:  4
+Using GPU
+EPOCH:  5
+Using GPU
+EPOCH:  6
+Using GPU
+EPOCH:  7
+Using GPU
+EPOCH:  8
+Using GPU
+EPOCH:  9
+Using GPU
+EPOCH:  10
+Using GPU
+EPOCH:  11
+Using GPU
+EPOCH:  12
+Using GPU
+EPOCH:  13
+Using GPU
+EPOCH:  14
+Using GPU
+EPOCH:  15
+Using GPU
+EPOCH:  16
+Using GPU
+EPOCH:  17
+Using GPU
+EPOCH:  18
+Using GPU
+EPOCH:  19
+Using GPU
+EPOCH:  20
+Using GPU
+EPOCH:  21
+Using GPU
+EPOCH:  22
+Using GPU
+EPOCH:  23
+Using GPU
+EPOCH:  24
+Using GPU
+EPOCH:  25
+Using GPU
+EPOCH:  26
+Using GPU
+EPOCH:  27
+Using GPU
+EPOCH:  28
+Using GPU
+EPOCH:  29
+Using GPU
+EPOCH:  30
+Using GPU
+EPOCH:  31
+Using GPU
+EPOCH:  32
+Using GPU
+EPOCH:  33
+Using GPU
+EPOCH:  34
+Using GPU
+EPOCH:  35
+Using GPU
+EPOCH:  36
+Using GPU
+EPOCH:  37
+Using GPU
+EPOCH:  38
+Using GPU
+EPOCH:  39
+Using GPU
+EPOCH:  40
+Using GPU
+EPOCH:  41
+Using GPU
+EPOCH:  42
+Using GPU
+EPOCH:  43
+Using GPU
+EPOCH:  44
+Using GPU
+EPOCH:  45
+Using GPU
+EPOCH:  46
+Using GPU
+EPOCH:  47
+Using GPU
+EPOCH:  48
+Using GPU
+EPOCH:  49
+lr:0.1, bs:64, val_loss:0.6857098937034607, balanced acc:0.9608798001472246
+loss: 0.1941754369667154 | acc: 96.1 | acc2: 0 | balanced_acc: 0.9608798001472246 | auc: 0.998854257136734 | acc_detailed: [99.1837,98.0617,94.9612,96.8317,96.6395,95.7399,96.8685,93.4825,94.6612,
+ 94.45  ] | map: 93.13734010224447 | 
+2000,96.1,random,0.9839240327367391
+best hyperparameters : lr 0.1, batch size 64
+time for querying 0.2300262451171875
+time for training 231.96052026748657
+2000,random,0.2300262451171875,231.96052026748657
+entropy cost
+3000,random,1.7669566869735718
+gap cost
+3000,random,1.3707416653633118
+3000,random,1.2517952346582066
+entropy 2 cost
+3000,random,2993.2850952148438
+Steps per epoch: 47.
+Using GPU
+STARTED TRAINING
+Using GPU
+EPOCH:  0
+Using GPU
+EPOCH:  1
+Using GPU
+EPOCH:  2
+Using GPU
+EPOCH:  3
+Using GPU
+EPOCH:  4
+Using GPU
+EPOCH:  5
+Using GPU
+EPOCH:  6
+Using GPU
+EPOCH:  7
+Using GPU
+EPOCH:  8
+Using GPU
+EPOCH:  9
+Using GPU
+EPOCH:  10
+Using GPU
+EPOCH:  11
+Using GPU
+EPOCH:  12
+Using GPU
+EPOCH:  13
+Using GPU
+EPOCH:  14
+Using GPU
+EPOCH:  15
+Using GPU
+EPOCH:  16
+Using GPU
+EPOCH:  17
+Using GPU
+EPOCH:  18
+Using GPU
+EPOCH:  19
+Using GPU
+EPOCH:  20
+Using GPU
+EPOCH:  21
+Using GPU
+EPOCH:  22
+Using GPU
+EPOCH:  23
+Using GPU
+EPOCH:  24
+Using GPU
+EPOCH:  25
+Using GPU
+EPOCH:  26
+Using GPU
+EPOCH:  27
+Using GPU
+EPOCH:  28
+Using GPU
+EPOCH:  29
+Using GPU
+EPOCH:  30
+Using GPU
+EPOCH:  31
+Using GPU
+EPOCH:  32
+Using GPU
+EPOCH:  33
+Using GPU
+EPOCH:  34
+Using GPU
+EPOCH:  35
+Using GPU
+EPOCH:  36
+Using GPU
+EPOCH:  37
+Using GPU
+EPOCH:  38
+Using GPU
+EPOCH:  39
+Using GPU
+EPOCH:  40
+Using GPU
+EPOCH:  41
+Using GPU
+EPOCH:  42
+Using GPU
+EPOCH:  43
+Using GPU
+EPOCH:  44
+Using GPU
+EPOCH:  45
+Using GPU
+EPOCH:  46
+Using GPU
+EPOCH:  47
+Using GPU
+EPOCH:  48
+Using GPU
+EPOCH:  49
+lr:0.1, bs:64, val_loss:0.25746372333804896, balanced acc:0.971550423622257
+loss: 0.12245440998097497 | acc: 97.18 | acc2: 0 | balanced_acc: 0.971550423622257 | auc: 0.9994625317781544 | acc_detailed: [99.1837,99.5595,96.5116,97.9208,97.6578,97.6457,96.3466,95.7198,94.9692,
+ 96.0357] | map: 94.9587191173996 | 
+3000,97.18,random,1.2517952346582066
+best hyperparameters : lr 0.1, batch size 64
+time for querying 0.22432470321655273
+time for training 248.77197241783142
+3000,random,0.22432470321655273,248.77197241783142
+entropy cost
+4000,random,2.5646263360977173
+gap cost
+4000,random,2.0133596062660217
+4000,random,1.5645314456516983
+entropy 2 cost
+4000,random,3991.0346069335938
+Steps per epoch: 63.
+Using GPU
+STARTED TRAINING
+Using GPU
+EPOCH:  0
+Using GPU
+EPOCH:  1
+Using GPU
+EPOCH:  2
+Using GPU
+EPOCH:  3
+Using GPU
+EPOCH:  4
+Using GPU
+EPOCH:  5
+Using GPU
+EPOCH:  6
+Using GPU
+EPOCH:  7
+Using GPU
+EPOCH:  8
+Using GPU
+EPOCH:  9
+Using GPU
+EPOCH:  10
+Using GPU
+EPOCH:  11
+Using GPU
+EPOCH:  12
+Using GPU
+EPOCH:  13
+Using GPU
+EPOCH:  14
+Using GPU
+EPOCH:  15
+Using GPU
+EPOCH:  16
+Using GPU
+EPOCH:  17
+Using GPU
+EPOCH:  18
+Using GPU
+EPOCH:  19
+Using GPU
+EPOCH:  20
+Using GPU
+EPOCH:  21
+Using GPU
+EPOCH:  22
+Using GPU
+EPOCH:  23
+Using GPU
+EPOCH:  24
+Using GPU
+EPOCH:  25
+Using GPU
+EPOCH:  26
+Using GPU
+EPOCH:  27
+Using GPU
+EPOCH:  28
+Using GPU
+EPOCH:  29
+Using GPU
+EPOCH:  30
+Using GPU
+EPOCH:  31
+Using GPU
+EPOCH:  32
+Using GPU
+EPOCH:  33
+Using GPU
+EPOCH:  34
+Using GPU
+EPOCH:  35
+Using GPU
+EPOCH:  36
+Using GPU
+EPOCH:  37
+Using GPU
+EPOCH:  38
+Using GPU
+EPOCH:  39
+Using GPU
+EPOCH:  40
+Using GPU
+EPOCH:  41
+Using GPU
+EPOCH:  42
+Using GPU
+EPOCH:  43
+Using GPU
+EPOCH:  44
+Using GPU
+EPOCH:  45
+Using GPU
+EPOCH:  46
+Using GPU
+EPOCH:  47
+Using GPU
+EPOCH:  48
+Using GPU
+EPOCH:  49
+lr:0.1, bs:64, val_loss:0.32376370117495396, balanced acc:0.9758936436049716
+loss: 0.11157954645857314 | acc: 97.61 | acc2: 0 | balanced_acc: 0.9758936436049716 | auc: 0.9995704839140226 | acc_detailed: [98.7755,98.8546,97.6744,98.3168,97.7597,97.3094,97.1816,96.5953,96.2012,
+ 97.225 ] | map: 95.66837846680801 | 
+4000,97.61,random,1.5645314456516983
+best hyperparameters : lr 0.1, batch size 64
+time for querying 0.22966742515563965
+time for training 268.5370910167694
+4000,random,0.22966742515563965,268.5370910167694
+entropy cost
+5000,random,3.022977888584137
+gap cost
+5000,random,2.275875508785248
+5000,random,1.7352442577651432
+entropy 2 cost
+5000,random,4988.847412109375
+Steps per epoch: 79.
+Using GPU
+STARTED TRAINING
+Using GPU
+EPOCH:  0
+Using GPU
+EPOCH:  1
+Using GPU
+EPOCH:  2
+Using GPU
+EPOCH:  3
+Using GPU
+EPOCH:  4
+Using GPU
+EPOCH:  5
+Using GPU
+EPOCH:  6
+Using GPU
+EPOCH:  7
+Using GPU
+EPOCH:  8
+Using GPU
+EPOCH:  9
+Using GPU
+EPOCH:  10
+Using GPU
+EPOCH:  11
+Using GPU
+EPOCH:  12
+Using GPU
+EPOCH:  13
+Using GPU
+EPOCH:  14
+Using GPU
+EPOCH:  15
+Using GPU
+EPOCH:  16
+Using GPU
+EPOCH:  17
+Using GPU
+EPOCH:  18
+Using GPU
+EPOCH:  19
+Using GPU
+EPOCH:  20
+Using GPU
+EPOCH:  21
+Using GPU
+EPOCH:  22
+Using GPU
+EPOCH:  23
+Using GPU
+EPOCH:  24
+Using GPU
+EPOCH:  25
+Using GPU
+EPOCH:  26
+Using GPU
+EPOCH:  27
+Using GPU
+EPOCH:  28
+Using GPU
+EPOCH:  29
+Using GPU
+EPOCH:  30
+Using GPU
+EPOCH:  31
+Using GPU
+EPOCH:  32
+Using GPU
+EPOCH:  33
+Using GPU
+EPOCH:  34
+Using GPU
+EPOCH:  35
+Using GPU
+EPOCH:  36
+Using GPU
+EPOCH:  37
+Using GPU
+EPOCH:  38
+Using GPU
+EPOCH:  39
+Using GPU
+EPOCH:  40
+Using GPU
+EPOCH:  41
+Using GPU
+EPOCH:  42
+Using GPU
+EPOCH:  43
+Using GPU
+EPOCH:  44
+Using GPU
+EPOCH:  45
+Using GPU
+EPOCH:  46
+Using GPU
+EPOCH:  47
+Using GPU
+EPOCH:  48
+Using GPU
+EPOCH:  49
+lr:0.1, bs:64, val_loss:0.20476857545506802, balanced acc:0.97605439885803
+loss: 0.10717998021725622 | acc: 97.63 | acc2: 0 | balanced_acc: 0.97605439885803 | auc: 0.9996217154626255 | acc_detailed: [99.0816,99.2952,97.7713,98.2178,97.4542,97.1973,97.286 ,96.4981,96.9199,
+ 96.333 ] | map: 95.69838322556616 | 
+5000,97.63,random,1.7352442577651432
+best hyperparameters : lr 0.1, batch size 64
+time for querying 0.22177863121032715
+time for training 284.9967110157013
+5000,random,0.22177863121032715,284.9967110157013
+entropy cost
+6000,random,3.8554375171661377
+gap cost
+6000,random,2.892369270324707
+6000,random,1.821046378456298
+entropy 2 cost
+6000,random,5986.613037109375
+Steps per epoch: 94.
+Using GPU
+STARTED TRAINING
+Using GPU
+EPOCH:  0
+Using GPU
+EPOCH:  1
+Using GPU
+EPOCH:  2
+Using GPU
+EPOCH:  3
+Using GPU
+EPOCH:  4
+Using GPU
+EPOCH:  5
+Using GPU
+EPOCH:  6
+Using GPU
+EPOCH:  7
+Using GPU
+EPOCH:  8
+Using GPU
+EPOCH:  9
+Using GPU
+EPOCH:  10
+Using GPU
+EPOCH:  11
+Using GPU
+EPOCH:  12
+Using GPU
+EPOCH:  13
+Using GPU
+EPOCH:  14
+Using GPU
+EPOCH:  15
+Using GPU
+EPOCH:  16
+Using GPU
+EPOCH:  17
+Using GPU
+EPOCH:  18
+Using GPU
+EPOCH:  19
+Using GPU
+EPOCH:  20
+Using GPU
+EPOCH:  21
+Using GPU
+EPOCH:  22
+Using GPU
+EPOCH:  23
+Using GPU
+EPOCH:  24
+Using GPU
+EPOCH:  25
+Using GPU
+EPOCH:  26
+Using GPU
+EPOCH:  27
+Using GPU
+EPOCH:  28
+Using GPU
+EPOCH:  29
+Using GPU
+EPOCH:  30
+Using GPU
+EPOCH:  31
+Using GPU
+EPOCH:  32
+Using GPU
+EPOCH:  33
+Using GPU
+EPOCH:  34
+Using GPU
+EPOCH:  35
+Using GPU
+EPOCH:  36
+Using GPU
+EPOCH:  37
+Using GPU
+EPOCH:  38
+Using GPU
+EPOCH:  39
+Using GPU
+EPOCH:  40
+Using GPU
+EPOCH:  41
+Using GPU
+EPOCH:  42
+Using GPU
+EPOCH:  43
+Using GPU
+EPOCH:  44
+Using GPU
+EPOCH:  45
+Using GPU
+EPOCH:  46
+Using GPU
+EPOCH:  47
+Using GPU
+EPOCH:  48
+Using GPU
+EPOCH:  49
+lr:0.1, bs:64, val_loss:0.2815253006851977, balanced acc:0.9801153047647201
+loss: 0.09498728587458577 | acc: 98.02 | acc2: 0 | balanced_acc: 0.9801153047647201 | auc: 0.9996755898871429 | acc_detailed: [99.0816,99.3833,97.093 ,98.2178,98.5743,98.3184,97.8079,97.3735,97.5359,
+ 96.7294] | map: 96.52337942811613 | 
+6000,98.02,random,1.821046378456298
+best hyperparameters : lr 0.1, batch size 64
+time for querying 0.22997117042541504
+time for training 302.73344802856445
+6000,random,0.22997117042541504,302.73344802856445
+entropy cost
+7000,random,4.609646201133728
+gap cost
+7000,random,3.3579180240631104
+7000,random,1.9396889660503978
+entropy 2 cost
+7000,random,6984.3621826171875
+Steps per epoch: 110.
+Using GPU
+STARTED TRAINING
+Using GPU
+EPOCH:  0
+Using GPU
+EPOCH:  1
+Using GPU
+EPOCH:  2
+Using GPU
+EPOCH:  3
+Using GPU
+EPOCH:  4
+Using GPU
+EPOCH:  5
+Using GPU
+EPOCH:  6
+Using GPU
+EPOCH:  7
+Using GPU
+EPOCH:  8
+Using GPU
+EPOCH:  9
+Using GPU
+EPOCH:  10
+Using GPU
+EPOCH:  11
+Using GPU
+EPOCH:  12
+Using GPU
+EPOCH:  13
+Using GPU
+EPOCH:  14
+Using GPU
+EPOCH:  15
+Using GPU
+EPOCH:  16
+Using GPU
+EPOCH:  17
+Using GPU
+EPOCH:  18
+Using GPU
+EPOCH:  19
+Using GPU
+EPOCH:  20
+Using GPU
+EPOCH:  21
+Using GPU
+EPOCH:  22
+Using GPU
+EPOCH:  23
+Using GPU
+EPOCH:  24
+Using GPU
+EPOCH:  25
+Using GPU
+EPOCH:  26
+Using GPU
+EPOCH:  27
+Using GPU
+EPOCH:  28
+Using GPU
+EPOCH:  29
+Using GPU
+EPOCH:  30
+Using GPU
+EPOCH:  31
+Using GPU
+EPOCH:  32
+Using GPU
+EPOCH:  33
+Using GPU
+EPOCH:  34
+Using GPU
+EPOCH:  35
+Using GPU
+EPOCH:  36
+Using GPU
+EPOCH:  37
+Using GPU
+EPOCH:  38
+Using GPU
+EPOCH:  39
+Using GPU
+EPOCH:  40
+Using GPU
+EPOCH:  41
+Using GPU
+EPOCH:  42
+Using GPU
+EPOCH:  43
+Using GPU
+EPOCH:  44
+Using GPU
+EPOCH:  45
+Using GPU
+EPOCH:  46
+Using GPU
+EPOCH:  47
+Using GPU
+EPOCH:  48
+Using GPU
+EPOCH:  49
+lr:0.1, bs:64, val_loss:0.1549910767668277, balanced acc:0.9817364692381261
+loss: 0.08200300984088492 | acc: 98.19 | acc2: 0 | balanced_acc: 0.9817364692381261 | auc: 0.9997341253373145 | acc_detailed: [99.1837,99.207 ,98.1589,98.7129,98.2688,97.87  ,97.7035,97.6654,97.7413,
+ 97.225 ] | map: 96.86946811483116 | 
+7000,98.19,random,1.9396889660503978
+best hyperparameters : lr 0.1, batch size 64
+time for querying 0.22437524795532227
+time for training 321.9167356491089
+7000,random,0.22437524795532227,321.9167356491089
+entropy cost
+8000,random,5.170358896255493
+gap cost
+8000,random,3.795094907283783
+8000,random,2.0609799537694466
+entropy 2 cost
+8000,random,7982.123046875
+Steps per epoch: 125.
+Using GPU
+STARTED TRAINING
+Using GPU
+EPOCH:  0
+Using GPU
+EPOCH:  1
+Using GPU
+EPOCH:  2
+Using GPU
+EPOCH:  3
+Using GPU
+EPOCH:  4
+Using GPU
+EPOCH:  5
+Using GPU
+EPOCH:  6
+Using GPU
+EPOCH:  7
+Using GPU
+EPOCH:  8
+Using GPU
+EPOCH:  9
+Using GPU
+EPOCH:  10
+Using GPU
+EPOCH:  11
+Using GPU
+EPOCH:  12
+Using GPU
+EPOCH:  13
+Using GPU
+EPOCH:  14
+Using GPU
+EPOCH:  15
+Using GPU
+EPOCH:  16
+Using GPU
+EPOCH:  17
+Using GPU
+EPOCH:  18
+Using GPU
+EPOCH:  19
+Using GPU
+EPOCH:  20
+Using GPU
+EPOCH:  21
+Using GPU
+EPOCH:  22
+Using GPU
+EPOCH:  23
+Using GPU
+EPOCH:  24
+Using GPU
+EPOCH:  25
+Using GPU
+EPOCH:  26
+Using GPU
+EPOCH:  27
+Using GPU
+EPOCH:  28
+Using GPU
+EPOCH:  29
+Using GPU
+EPOCH:  30
+Using GPU
+EPOCH:  31
+Using GPU
+EPOCH:  32
+Using GPU
+EPOCH:  33
+Using GPU
+EPOCH:  34
+Using GPU
+EPOCH:  35
+Using GPU
+EPOCH:  36
+Using GPU
+EPOCH:  37
+Using GPU
+EPOCH:  38
+Using GPU
+EPOCH:  39
+Using GPU
+EPOCH:  40
+Using GPU
+EPOCH:  41
+Using GPU
+EPOCH:  42
+Using GPU
+EPOCH:  43
+Using GPU
+EPOCH:  44
+Using GPU
+EPOCH:  45
+Using GPU
+EPOCH:  46
+Using GPU
+EPOCH:  47
+Using GPU
+EPOCH:  48
+Using GPU
+EPOCH:  49
+lr:0.1, bs:64, val_loss:0.12418832792900503, balanced acc:0.9820330575951305
+loss: 0.0744509266770256 | acc: 98.22 | acc2: 0 | balanced_acc: 0.9820330575951305 | auc: 0.9997802718770733 | acc_detailed: [99.1837,99.1189,98.5465,98.6139,97.9633,97.87  ,97.8079,97.8599,97.8439,
+ 97.225 ] | map: 96.73822507003396 | 
+8000,98.22,random,2.0609799537694466
+best hyperparameters : lr 0.1, batch size 64
+time for querying 0.22991228103637695
+time for training 337.941508769989
+8000,random,0.22991228103637695,337.941508769989
+entropy cost
+9000,random,5.872301816940308
+gap cost
+9000,random,4.297922849655151
+9000,random,2.1868921718768246
+entropy 2 cost
+9000,random,8979.893920898438
+Steps per epoch: 141.
+Using GPU
+STARTED TRAINING
+Using GPU
+EPOCH:  0
+Using GPU
+EPOCH:  1
+Using GPU
+EPOCH:  2
+Using GPU
+EPOCH:  3
+Using GPU
+EPOCH:  4
+Using GPU
+EPOCH:  5
+Using GPU
+EPOCH:  6
+Using GPU
+EPOCH:  7
+Using GPU
+EPOCH:  8
+Using GPU
+EPOCH:  9
+Using GPU
+EPOCH:  10
+Using GPU
+EPOCH:  11
+Using GPU
+EPOCH:  12
+Using GPU
+EPOCH:  13
+Using GPU
+EPOCH:  14
+Using GPU
+EPOCH:  15
+Using GPU
+EPOCH:  16
+Using GPU
+EPOCH:  17
+Using GPU
+EPOCH:  18
+Using GPU
+EPOCH:  19
+Using GPU
+EPOCH:  20
+Using GPU
+EPOCH:  21
+Using GPU
+EPOCH:  22
+Using GPU
+EPOCH:  23
+Using GPU
+EPOCH:  24
+Using GPU
+EPOCH:  25
+Using GPU
+EPOCH:  26
+Using GPU
+EPOCH:  27
+Using GPU
+EPOCH:  28
+Using GPU
+EPOCH:  29
+Using GPU
+EPOCH:  30
+Using GPU
+EPOCH:  31
+Using GPU
+EPOCH:  32
+Using GPU
+EPOCH:  33
+Using GPU
+EPOCH:  34
+Using GPU
+EPOCH:  35
+Using GPU
+EPOCH:  36
+Using GPU
+EPOCH:  37
+Using GPU
+EPOCH:  38
+Using GPU
+EPOCH:  39
+Using GPU
+EPOCH:  40
+Using GPU
+EPOCH:  41
+Using GPU
+EPOCH:  42
+Using GPU
+EPOCH:  43
+Using GPU
+EPOCH:  44
+Using GPU
+EPOCH:  45
+Using GPU
+EPOCH:  46
+Using GPU
+EPOCH:  47
+Using GPU
+EPOCH:  48
+Using GPU
+EPOCH:  49
+lr:0.1, bs:64, val_loss:0.15275749224564358, balanced acc:0.9829424246129704
+loss: 0.07000549870602532 | acc: 98.31 | acc2: 0 | balanced_acc: 0.9829424246129704 | auc: 0.9998175889220312 | acc_detailed: [99.1837,99.4714,97.8682,98.9109,98.2688,98.0942,98.1211,98.249 ,97.9466,
+ 96.8285] | map: 97.05248777393389 | 
+9000,98.31,random,2.1868921718768246
+best hyperparameters : lr 0.1, batch size 64
+time for querying 0.22950077056884766
+time for training 358.3677656650543
+9000,random,0.22950077056884766,358.3677656650543
+entropy cost
+10000,random,6.978017687797546
+gap cost
+10000,random,5.151860415935516
+10000,random,2.52529461604594
+entropy 2 cost
+10000,random,9977.627136230469
+Steps per epoch: 157.
+Using GPU
+STARTED TRAINING
+Using GPU
+EPOCH:  0
+Using GPU
+EPOCH:  1
+Using GPU
+EPOCH:  2
+Using GPU
+EPOCH:  3
+Using GPU
+EPOCH:  4
+Using GPU
+EPOCH:  5
+Using GPU
+EPOCH:  6
+Using GPU
+EPOCH:  7
+Using GPU
+EPOCH:  8
+Using GPU
+EPOCH:  9
+Using GPU
+EPOCH:  10
+Using GPU
+EPOCH:  11
+Using GPU
+EPOCH:  12
+Using GPU
+EPOCH:  13
+Using GPU
+EPOCH:  14
+Using GPU
+EPOCH:  15
+Using GPU
+EPOCH:  16
+Using GPU
+EPOCH:  17
+Using GPU
+EPOCH:  18
+Using GPU
+EPOCH:  19
+Using GPU
+EPOCH:  20
+Using GPU
+EPOCH:  21
+Using GPU
+EPOCH:  22
+Using GPU
+EPOCH:  23
+Using GPU
+EPOCH:  24
+Using GPU
+EPOCH:  25
+Using GPU
+EPOCH:  26
+Using GPU
+EPOCH:  27
+Using GPU
+EPOCH:  28
+Using GPU
+EPOCH:  29
+Using GPU
+EPOCH:  30
+Using GPU
+EPOCH:  31
+Using GPU
+EPOCH:  32
+Using GPU
+EPOCH:  33
+Using GPU
+EPOCH:  34
+Using GPU
+EPOCH:  35
+Using GPU
+EPOCH:  36
+Using GPU
+EPOCH:  37
+Using GPU
+EPOCH:  38
+Using GPU
+EPOCH:  39
+Using GPU
+EPOCH:  40
+Using GPU
+EPOCH:  41
+Using GPU
+EPOCH:  42
+Using GPU
+EPOCH:  43
+Using GPU
+EPOCH:  44
+Using GPU
+EPOCH:  45
+Using GPU
+EPOCH:  46
+Using GPU
+EPOCH:  47
+Using GPU
+EPOCH:  48
+Using GPU
+EPOCH:  49
+lr:0.1, bs:64, val_loss:0.1488318597975003, balanced acc:0.985517297620506
+loss: 0.05890739927424532 | acc: 98.56 | acc2: 0 | balanced_acc: 0.985517297620506 | auc: 0.999855195747728 | acc_detailed: [99.2857,99.3833,98.4496,98.8119,98.167 ,98.7668,98.4342,98.3463,98.152 ,
+ 97.7205] | map: 97.53324230418116 | 
+10000,98.56,random,2.52529461604594
+best hyperparameters : lr 0.1, batch size 64
+time for querying 0.22953057289123535
+time for training 376.45791006088257
+10000,random,0.22953057289123535,376.45791006088257
+elapsed time: 3024.9757237434387
+

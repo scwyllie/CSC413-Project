@@ -1,0 +1,313 @@
+###################################################################
+args: 
+adam_amsgrad :  False
+adaptive_batch_size :  1000
+apply_data_independent_bound :  False
+architectures :  ['MnistNetPate']
+attacker_dataset :  imagenet
+batch_size :  64
+begin_id :  0
+budget :  10.0
+budgets :  [10.0]
+class_type :  multiclass
+commands :  ['basic_model_stealing_attack']
+cwd :  /h/321/scwyllie/model-extraction-iclr
+data_dir :  /h/321/scwyllie/data
+dataset :  mnist
+dataset_type :  balanced
+debug :  False
+device_ids :  [0, 1]
+end_id :  1
+eval_batch_size :  1000
+label_reweight :  disable
+log_every_epoch :  0
+loss_type :  CE
+lr :  0.1
+lr_epochs :  [2]
+lr_factor :  0.1
+lr_mixmatch :  0.002
+mode :  knockoff
+model_size :  small
+momentum :  0.5
+num_epochs :  50
+num_models :  1
+num_optimization_loop :  0
+num_querying_parties :  1
+num_workers :  0
+optimizer :  SGD
+path :  /h/321/scwyllie/model-extraction-iclr
+patience :  None
+poisson_mechanism :  False
+query_set_type :  numpy
+querying_party_ids :  [0, 1, 2]
+retrain_extracted_model :  False
+schedule_factor :  0.1
+schedule_patience :  10
+scheduler_milestones :  None
+scheduler_type :  ReduceLROnPlateau
+seed :  111
+show_dp_budget :  apply
+shuffle_dataset :  False
+sigma_gnmax :  2.0
+sigma_gnmax_private_knn :  28
+sigma_threshold :  0.0
+sigmoid_op :  apply
+target_model :  victim
+test_models_type :  private
+threshold :  0.0
+timestamp :  2023-04-14-13-48-10-576234
+transfer_type :  
+useserver :  False
+verbose :  True
+weight_decay :  0.0001
+ARGS FINISHED
+######################################################
+architecture:  MnistNetPate
+num_models:  1
+args.private_model_path:  /h/321/scwyllie/model-extraction-iclr/private-models/mnist/MnistNetPate/1-models
+args.retrained_private_models_path:  /h/321/scwyllie/model-extraction-iclr/retrained-private-models/mnist/MnistNetPate/1-models/knockoff
+queries,accuracy,type,privacy
+queries,accuracy,type,privacy
+0,10,0,0
+0,10,0,0
+queries,type,entropy
+0,0,0
+queries,type,gap
+0,0,0
+queries,type,pknn
+0,0,0
+/h/321/scwyllie/.conda/envs/413Stuff/lib/python3.9/site-packages/torchvision/transforms/functional.py:1603: UserWarning: The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).
+  warnings.warn(
+args.victim_model_path:  /h/321/scwyllie/model-extraction-iclr/private-models/mnist/MnistNetPate/1-models
+Training adaptive model on 'mnist' dataset!
+Training adaptive model on 'MnistNetPate' architecture!
+Number of private models: 1
+Initial learning rate: 0.1.
+Number of epochs for training each model: 50
+eval dataset:  <torch.utils.data.dataset.Subset object at 0x7f585beeb8b0>
+Label counts for eval set: [ 980, 1135, 1032, 1010,  982,  892,  958, 1028,  974, 1009].
+Class ratios for eval set: [ 9.8 , 11.35, 10.32, 10.1 ,  9.82,  8.92,  9.58, 10.28,  9.74, 10.09].
+Number of eval samples: 10000.
+Loaded stolen model
+Building ensemble model 'ensemble(all)'!
+Using GPU
+accuracy of victim: 99.39.
+attacker uses imagenet dataset.
+There are 50000 unlabeled points in total.
+First iteration, no retraining
+entropy cost
+1000,knockoff,457.4328918457031
+gap cost
+1000,knockoff,467.7143859863281
+1000,knockoff,10.301793124391308
+1000,59.56,knockoff,0
+1000,59.65,knockoff,0
+time for querying 11.824909448623657
+time for training 62.70909094810486
+1000,knockoff,11.824909448623657,62.70909094810486
+entropy cost
+2000,knockoff,905.5362854003906
+gap cost
+2000,knockoff,924.1513366699219
+2000,knockoff,16.682381351169266
+2000,86.77,knockoff,0
+2000,86.9,knockoff,0
+time for querying 12.070019483566284
+time for training 98.22799229621887
+2000,knockoff,12.070019483566284,98.22799229621887
+entropy cost
+3000,knockoff,1365.3544006347656
+gap cost
+3000,knockoff,1392.0233459472656
+3000,knockoff,22.456103435112492
+3000,93.32,knockoff,0
+3000,93.41,knockoff,0
+time for querying 12.04459261894226
+time for training 133.4868655204773
+3000,knockoff,12.04459261894226,133.4868655204773
+entropy cost
+4000,knockoff,1814.8672485351562
+gap cost
+4000,knockoff,1854.1985778808594
+4000,knockoff,27.48413880811313
+4000,95.03,knockoff,0
+4000,95.2,knockoff,0
+time for querying 11.869721174240112
+time for training 167.2320911884308
+4000,knockoff,11.869721174240112,167.2320911884308
+entropy cost
+5000,knockoff,2272.373291015625
+gap cost
+5000,knockoff,2328.2277221679688
+5000,knockoff,32.52658887992337
+5000,96.86,knockoff,0
+5000,97.01,knockoff,0
+time for querying 11.911699295043945
+time for training 201.55476140975952
+5000,knockoff,11.911699295043945,201.55476140975952
+entropy cost
+6000,knockoff,2718.9924926757812
+gap cost
+6000,knockoff,2786.2818603515625
+6000,knockoff,37.935760459108046
+6000,97.49,knockoff,0
+6000,97.67,knockoff,0
+time for querying 12.063122510910034
+time for training 241.2233748435974
+6000,knockoff,12.063122510910034,241.2233748435974
+entropy cost
+7000,knockoff,3173.1828002929688
+gap cost
+7000,knockoff,3257.037872314453
+7000,knockoff,42.75958737258634
+7000,97.65,knockoff,0
+7000,97.82,knockoff,0
+time for querying 12.04893970489502
+time for training 271.00919556617737
+7000,knockoff,12.04893970489502,271.00919556617737
+entropy cost
+8000,knockoff,3633.7100830078125
+gap cost
+8000,knockoff,3722.0534057617188
+8000,knockoff,47.014623743966645
+8000,97.97,knockoff,0
+8000,98.15,knockoff,0
+time for querying 12.134940147399902
+time for training 306.9133801460266
+8000,knockoff,12.134940147399902,306.9133801460266
+entropy cost
+9000,knockoff,4099.136901855469
+gap cost
+9000,knockoff,4190.657958984375
+9000,knockoff,52.151772755062254
+9000,98.21,knockoff,0
+9000,98.44,knockoff,0
+time for querying 12.187087774276733
+time for training 344.29281306266785
+9000,knockoff,12.187087774276733,344.29281306266785
+entropy cost
+10000,knockoff,4554.731140136719
+gap cost
+10000,knockoff,4655.6466064453125
+10000,knockoff,56.377233972510446
+10000,98.39,knockoff,0
+10000,98.65,knockoff,0
+time for querying 12.292534828186035
+time for training 379.3094038963318
+10000,knockoff,12.292534828186035,379.3094038963318
+entropy cost
+11000,knockoff,5013.172576904297
+gap cost
+11000,knockoff,5129.422576904297
+11000,knockoff,60.970749767086986
+11000,98.47,knockoff,0
+11000,98.73,knockoff,0
+time for querying 12.151481628417969
+time for training 412.74899220466614
+11000,knockoff,12.151481628417969,412.74899220466614
+entropy cost
+12000,knockoff,5467.943695068359
+gap cost
+12000,knockoff,5587.759735107422
+12000,knockoff,65.41254110503527
+12000,98.57,knockoff,0
+12000,98.8,knockoff,0
+time for querying 12.387897253036499
+time for training 445.5867018699646
+12000,knockoff,12.387897253036499,445.5867018699646
+entropy cost
+13000,knockoff,5925.496734619141
+gap cost
+13000,knockoff,6049.5421142578125
+13000,knockoff,69.95189035851111
+13000,98.64,knockoff,0
+13000,98.88,knockoff,0
+time for querying 12.640011548995972
+time for training 483.51705145835876
+13000,knockoff,12.640011548995972,483.51705145835876
+entropy cost
+14000,knockoff,6385.3311767578125
+gap cost
+14000,knockoff,6525.694061279297
+14000,knockoff,74.57281499491818
+14000,98.66,knockoff,0
+14000,98.93,knockoff,0
+time for querying 12.565258026123047
+time for training 519.3676493167877
+14000,knockoff,12.565258026123047,519.3676493167877
+entropy cost
+15000,knockoff,6843.070983886719
+gap cost
+15000,knockoff,6994.649017333984
+15000,knockoff,79.13974620805149
+15000,98.8,knockoff,0
+15000,99.06,knockoff,0
+time for querying 12.701178073883057
+time for training 553.1795198917389
+15000,knockoff,12.701178073883057,553.1795198917389
+entropy cost
+16000,knockoff,7298.806701660156
+gap cost
+16000,knockoff,7455.262054443359
+16000,knockoff,83.66975118223759
+16000,98.85,knockoff,0
+16000,99.13,knockoff,0
+time for querying 12.356390476226807
+time for training 585.7022976875305
+16000,knockoff,12.356390476226807,585.7022976875305
+entropy cost
+17000,knockoff,7753.935363769531
+gap cost
+17000,knockoff,7922.310089111328
+17000,knockoff,87.61408727549733
+17000,98.89,knockoff,0
+17000,99.15,knockoff,0
+time for querying 12.65982174873352
+time for training 628.4550640583038
+17000,knockoff,12.65982174873352,628.4550640583038
+entropy cost
+18000,knockoff,8205.120697021484
+gap cost
+18000,knockoff,8381.500427246094
+18000,knockoff,91.88975498661372
+18000,98.89,knockoff,0
+18000,99.17,knockoff,0
+time for querying 13.23591136932373
+time for training 657.2921521663666
+18000,knockoff,13.23591136932373,657.2921521663666
+entropy cost
+19000,knockoff,8655.065338134766
+gap cost
+19000,knockoff,8844.378692626953
+19000,knockoff,96.33071532484176
+19000,98.95,knockoff,0
+19000,99.27,knockoff,0
+time for querying 13.545247077941895
+time for training 688.8334965705872
+19000,knockoff,13.545247077941895,688.8334965705872
+entropy cost
+20000,knockoff,9103.693389892578
+gap cost
+20000,knockoff,9292.89956665039
+20000,knockoff,101.38409932053187
+20000,98.96,knockoff,0
+20000,99.26,knockoff,0
+time for querying 13.596926927566528
+time for training 728.4251260757446
+20000,knockoff,13.596926927566528,728.4251260757446
+entropy cost
+21000,knockoff,9550.794464111328
+gap cost
+21000,knockoff,9745.998016357422
+21000,knockoff,106.15348672020366
+21000,99.01,knockoff,0
+21000,99.28,knockoff,0
+time for querying 13.807395219802856
+time for training 757.5777702331543
+21000,knockoff,13.807395219802856,757.5777702331543
+entropy cost
+22000,knockoff,10004.93701171875
+gap cost
+22000,knockoff,10206.624542236328
+22000,knockoff,110.11033058199885
+slurmstepd: error: *** JOB 81000 ON nic2 CANCELLED AT 2023-04-14T16:39:24 ***

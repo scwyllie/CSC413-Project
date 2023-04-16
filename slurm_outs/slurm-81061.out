@@ -1,0 +1,2062 @@
+###################################################################
+args: 
+adam_amsgrad :  False
+adaptive_batch_size :  1000
+apply_data_independent_bound :  False
+architectures :  ['ResNet34']
+attacker_dataset :  None
+batch_size :  64
+begin_id :  0
+budget :  10.0
+budgets :  [10.0]
+class_type :  multiclass
+commands :  ['basic_model_stealing_attack']
+cwd :  /h/321/scwyllie/model-extraction-iclr
+data_dir :  /h/321/scwyllie/random-extract/data
+dataset :  cifar10
+dataset_type :  balanced
+debug :  False
+device_ids :  [0, 1]
+end_id :  1
+eval_batch_size :  1000
+label_reweight :  disable
+log_every_epoch :  0
+loss_type :  CE
+lr :  0.1
+lr_epochs :  [2]
+lr_factor :  0.1
+lr_mixmatch :  0.002
+mode :  random
+model_size :  small
+momentum :  0.5
+num_epochs :  100
+num_models :  1
+num_optimization_loop :  0
+num_querying_parties :  1
+num_workers :  0
+optimizer :  SGD
+path :  /h/321/scwyllie/random-extract
+patience :  None
+poisson_mechanism :  False
+query_set_type :  numpy
+querying_party_ids :  [0, 1, 2]
+retrain_extracted_model :  False
+schedule_factor :  0.1
+schedule_patience :  10
+scheduler_milestones :  None
+scheduler_type :  ReduceLROnPlateau
+seed :  111
+show_dp_budget :  apply
+shuffle_dataset :  False
+sigma_gnmax :  2.0
+sigma_gnmax_private_knn :  28.0
+sigma_threshold :  0.0
+sigmoid_op :  apply
+target_model :  victim
+test_models_type :  private
+threshold :  0.0
+timestamp :  2023-04-15-12-43-47-250357
+transfer_type :  
+useserver :  False
+verbose :  True
+weight_decay :  0.0001
+ARGS FINISHED
+######################################################
+architecture:  ResNet34
+num_models:  1
+args.private_model_path:  /h/321/scwyllie/random-extract/private-models/cifar10/ResNet34/1-models
+args.retrained_private_models_path:  /h/321/scwyllie/random-extract/retrained-private-models/cifar10/ResNet34/1-models/random
+queries,accuracy,type,privacy
+queries,accuracy,type,privacy
+0,10,0,0
+0,10,0,0
+queries,type,entropy
+0,0,0
+queries,type,gap
+0,0,0
+queries,type,pknn
+0,0,0
+Files already downloaded and verified
+args.victim_model_path:  /h/321/scwyllie/random-extract/private-models/cifar10/ResNet34/1-models
+Training adaptive model on 'cifar10' dataset!
+Training adaptive model on 'ResNet34' architecture!
+Number of private models: 1
+Initial learning rate: 0.1.
+Number of epochs for training each model: 100
+eval dataset:  <torch.utils.data.dataset.Subset object at 0x7fbef0ce6940>
+Label counts for eval set: [107,  96, 100,  87,  91, 102,  91, 109, 104, 113].
+Class ratios for eval set: [10.7,  9.6, 10. ,  8.7,  9.1, 10.2,  9.1, 10.9, 10.4, 11.3].
+Number of eval samples: 1000.
+Loaded stolen model
+Building ensemble model 'ensemble(all)'!
+Loaded victim
+Using GPU
+accuracy of victim: 95.6.
+Files already downloaded and verified
+Files already downloaded and verified
+There are 9000 unlabeled points in total.
+First iteration, no retraining
+entropy cost
+1000,random,23.555307388305664
+gap cost
+1000,random,31.449914932250977
+1000,random,1.5655784885749013
+entropy 2 cost
+1000,random,921.8800048828125
+Steps per epoch: 16.
+Using GPU
+STARTED TRAINING
+Using GPU
+EPOCH:  0
+Using GPU
+EPOCH:  1
+Using GPU
+EPOCH:  2
+Using GPU
+EPOCH:  3
+Using GPU
+EPOCH:  4
+Using GPU
+EPOCH:  5
+Using GPU
+EPOCH:  6
+Using GPU
+EPOCH:  7
+Using GPU
+EPOCH:  8
+Using GPU
+EPOCH:  9
+Using GPU
+EPOCH:  10
+Using GPU
+EPOCH:  11
+Using GPU
+EPOCH:  12
+Using GPU
+EPOCH:  13
+Using GPU
+EPOCH:  14
+Using GPU
+EPOCH:  15
+Using GPU
+EPOCH:  16
+Using GPU
+EPOCH:  17
+Using GPU
+EPOCH:  18
+Using GPU
+EPOCH:  19
+Using GPU
+EPOCH:  20
+Using GPU
+EPOCH:  21
+Using GPU
+EPOCH:  22
+Using GPU
+EPOCH:  23
+Using GPU
+EPOCH:  24
+Using GPU
+EPOCH:  25
+Using GPU
+EPOCH:  26
+Using GPU
+EPOCH:  27
+Using GPU
+EPOCH:  28
+Using GPU
+EPOCH:  29
+Using GPU
+EPOCH:  30
+Using GPU
+EPOCH:  31
+Using GPU
+EPOCH:  32
+Using GPU
+EPOCH:  33
+Using GPU
+EPOCH:  34
+Using GPU
+EPOCH:  35
+Using GPU
+EPOCH:  36
+Using GPU
+EPOCH:  37
+Using GPU
+EPOCH:  38
+Using GPU
+EPOCH:  39
+Using GPU
+EPOCH:  40
+Using GPU
+EPOCH:  41
+Using GPU
+EPOCH:  42
+Using GPU
+EPOCH:  43
+Using GPU
+EPOCH:  44
+Using GPU
+EPOCH:  45
+Using GPU
+EPOCH:  46
+Using GPU
+EPOCH:  47
+Using GPU
+EPOCH:  48
+Using GPU
+EPOCH:  49
+Using GPU
+EPOCH:  50
+Using GPU
+EPOCH:  51
+Using GPU
+EPOCH:  52
+Using GPU
+EPOCH:  53
+Using GPU
+EPOCH:  54
+Using GPU
+EPOCH:  55
+Using GPU
+EPOCH:  56
+Using GPU
+EPOCH:  57
+Using GPU
+EPOCH:  58
+Using GPU
+EPOCH:  59
+Using GPU
+EPOCH:  60
+Using GPU
+EPOCH:  61
+Using GPU
+EPOCH:  62
+Using GPU
+EPOCH:  63
+Using GPU
+EPOCH:  64
+Using GPU
+EPOCH:  65
+Using GPU
+EPOCH:  66
+Using GPU
+EPOCH:  67
+Using GPU
+EPOCH:  68
+Using GPU
+EPOCH:  69
+Using GPU
+EPOCH:  70
+Using GPU
+EPOCH:  71
+Using GPU
+EPOCH:  72
+Using GPU
+EPOCH:  73
+Using GPU
+EPOCH:  74
+Using GPU
+EPOCH:  75
+Using GPU
+EPOCH:  76
+Using GPU
+EPOCH:  77
+Using GPU
+EPOCH:  78
+Using GPU
+EPOCH:  79
+Using GPU
+EPOCH:  80
+Using GPU
+EPOCH:  81
+Using GPU
+EPOCH:  82
+Using GPU
+EPOCH:  83
+Using GPU
+EPOCH:  84
+Using GPU
+EPOCH:  85
+Using GPU
+EPOCH:  86
+Using GPU
+EPOCH:  87
+Using GPU
+EPOCH:  88
+Using GPU
+EPOCH:  89
+Using GPU
+EPOCH:  90
+Using GPU
+EPOCH:  91
+Using GPU
+EPOCH:  92
+Using GPU
+EPOCH:  93
+Using GPU
+EPOCH:  94
+Using GPU
+EPOCH:  95
+Using GPU
+EPOCH:  96
+Using GPU
+EPOCH:  97
+Using GPU
+EPOCH:  98
+Using GPU
+EPOCH:  99
+lr:0.1, bs:64, val_loss:214.93998908996582, balanced acc:0.3556526313024543
+loss: 4.660311162471771 | acc: 36.0 | acc2: 0 | balanced_acc: 0.3556526313024543 | auc: 0.7817195489877997 | acc_detailed: [48.5981,40.625 ,21.    ,20.6897,26.3736,21.5686,47.2527,39.4495,42.3077,
+ 47.7876] | map: 24.32580466928091 | 
+1000,36.0,random,1.5655784885749013
+best hyperparameters : lr 0.1, batch size 64
+time for querying 0.35799455642700195
+time for training 151.28475093841553
+1000,random,0.35799455642700195,151.28475093841553
+entropy cost
+2000,random,47.50432205200195
+gap cost
+2000,random,63.359575271606445
+2000,random,2.321445620834803
+entropy 2 cost
+2000,random,1844.5240478515625
+Steps per epoch: 32.
+Using GPU
+STARTED TRAINING
+Using GPU
+EPOCH:  0
+Using GPU
+EPOCH:  1
+Using GPU
+EPOCH:  2
+Using GPU
+EPOCH:  3
+Using GPU
+EPOCH:  4
+Using GPU
+EPOCH:  5
+Using GPU
+EPOCH:  6
+Using GPU
+EPOCH:  7
+Using GPU
+EPOCH:  8
+Using GPU
+EPOCH:  9
+Using GPU
+EPOCH:  10
+Using GPU
+EPOCH:  11
+Using GPU
+EPOCH:  12
+Using GPU
+EPOCH:  13
+Using GPU
+EPOCH:  14
+Using GPU
+EPOCH:  15
+Using GPU
+EPOCH:  16
+Using GPU
+EPOCH:  17
+Using GPU
+EPOCH:  18
+Using GPU
+EPOCH:  19
+Using GPU
+EPOCH:  20
+Using GPU
+EPOCH:  21
+Using GPU
+EPOCH:  22
+Using GPU
+EPOCH:  23
+Using GPU
+EPOCH:  24
+Using GPU
+EPOCH:  25
+Using GPU
+EPOCH:  26
+Using GPU
+EPOCH:  27
+Using GPU
+EPOCH:  28
+Using GPU
+EPOCH:  29
+Using GPU
+EPOCH:  30
+Using GPU
+EPOCH:  31
+Using GPU
+EPOCH:  32
+Using GPU
+EPOCH:  33
+Using GPU
+EPOCH:  34
+Using GPU
+EPOCH:  35
+Using GPU
+EPOCH:  36
+Using GPU
+EPOCH:  37
+Using GPU
+EPOCH:  38
+Using GPU
+EPOCH:  39
+Using GPU
+EPOCH:  40
+Using GPU
+EPOCH:  41
+Using GPU
+EPOCH:  42
+Using GPU
+EPOCH:  43
+Using GPU
+EPOCH:  44
+Using GPU
+EPOCH:  45
+Using GPU
+EPOCH:  46
+Using GPU
+EPOCH:  47
+Using GPU
+EPOCH:  48
+Using GPU
+EPOCH:  49
+Using GPU
+EPOCH:  50
+Using GPU
+EPOCH:  51
+Using GPU
+EPOCH:  52
+Using GPU
+EPOCH:  53
+Using GPU
+EPOCH:  54
+Using GPU
+EPOCH:  55
+Using GPU
+EPOCH:  56
+Using GPU
+EPOCH:  57
+Using GPU
+EPOCH:  58
+Using GPU
+EPOCH:  59
+Using GPU
+EPOCH:  60
+Using GPU
+EPOCH:  61
+Using GPU
+EPOCH:  62
+Using GPU
+EPOCH:  63
+Using GPU
+EPOCH:  64
+Using GPU
+EPOCH:  65
+Using GPU
+EPOCH:  66
+Using GPU
+EPOCH:  67
+Using GPU
+EPOCH:  68
+Using GPU
+EPOCH:  69
+Using GPU
+EPOCH:  70
+Using GPU
+EPOCH:  71
+Using GPU
+EPOCH:  72
+Using GPU
+EPOCH:  73
+Using GPU
+EPOCH:  74
+Using GPU
+EPOCH:  75
+Using GPU
+EPOCH:  76
+Using GPU
+EPOCH:  77
+Using GPU
+EPOCH:  78
+Using GPU
+EPOCH:  79
+Using GPU
+EPOCH:  80
+Using GPU
+EPOCH:  81
+Using GPU
+EPOCH:  82
+Using GPU
+EPOCH:  83
+Using GPU
+EPOCH:  84
+Using GPU
+EPOCH:  85
+Using GPU
+EPOCH:  86
+Using GPU
+EPOCH:  87
+Using GPU
+EPOCH:  88
+Using GPU
+EPOCH:  89
+Using GPU
+EPOCH:  90
+Using GPU
+EPOCH:  91
+Using GPU
+EPOCH:  92
+Using GPU
+EPOCH:  93
+Using GPU
+EPOCH:  94
+Using GPU
+EPOCH:  95
+Using GPU
+EPOCH:  96
+Using GPU
+EPOCH:  97
+Using GPU
+EPOCH:  98
+Using GPU
+EPOCH:  99
+lr:0.1, bs:64, val_loss:4.358583137392998, balanced acc:0.3900111494497418
+loss: 4.254057422280312 | acc: 39.5 | acc2: 0 | balanced_acc: 0.3900111494497418 | auc: 0.806798057529353 | acc_detailed: [45.7944,40.625 ,33.    ,22.9885,23.0769,34.3137,47.2527,46.789 ,51.9231,
+ 44.2478] | map: 25.879639596950554 | 
+2000,39.5,random,2.321445620834803
+best hyperparameters : lr 0.1, batch size 64
+time for querying 0.33243870735168457
+time for training 230.4481475353241
+2000,random,0.33243870735168457,230.4481475353241
+entropy cost
+3000,random,67.05841636657715
+gap cost
+3000,random,89.04394149780273
+3000,random,2.8971543903741193
+entropy 2 cost
+3000,random,2767.4645385742188
+Steps per epoch: 47.
+Using GPU
+STARTED TRAINING
+Using GPU
+EPOCH:  0
+Using GPU
+EPOCH:  1
+Using GPU
+EPOCH:  2
+Using GPU
+EPOCH:  3
+Using GPU
+EPOCH:  4
+Using GPU
+EPOCH:  5
+Using GPU
+EPOCH:  6
+Using GPU
+EPOCH:  7
+Using GPU
+EPOCH:  8
+Using GPU
+EPOCH:  9
+Using GPU
+EPOCH:  10
+Using GPU
+EPOCH:  11
+Using GPU
+EPOCH:  12
+Using GPU
+EPOCH:  13
+Using GPU
+EPOCH:  14
+Using GPU
+EPOCH:  15
+Using GPU
+EPOCH:  16
+Using GPU
+EPOCH:  17
+Using GPU
+EPOCH:  18
+Using GPU
+EPOCH:  19
+Using GPU
+EPOCH:  20
+Using GPU
+EPOCH:  21
+Using GPU
+EPOCH:  22
+Using GPU
+EPOCH:  23
+Using GPU
+EPOCH:  24
+Using GPU
+EPOCH:  25
+Using GPU
+EPOCH:  26
+Using GPU
+EPOCH:  27
+Using GPU
+EPOCH:  28
+Using GPU
+EPOCH:  29
+Using GPU
+EPOCH:  30
+Using GPU
+EPOCH:  31
+Using GPU
+EPOCH:  32
+Using GPU
+EPOCH:  33
+Using GPU
+EPOCH:  34
+Using GPU
+EPOCH:  35
+Using GPU
+EPOCH:  36
+Using GPU
+EPOCH:  37
+Using GPU
+EPOCH:  38
+Using GPU
+EPOCH:  39
+Using GPU
+EPOCH:  40
+Using GPU
+EPOCH:  41
+Using GPU
+EPOCH:  42
+Using GPU
+EPOCH:  43
+Using GPU
+EPOCH:  44
+Using GPU
+EPOCH:  45
+Using GPU
+EPOCH:  46
+Using GPU
+EPOCH:  47
+Using GPU
+EPOCH:  48
+Using GPU
+EPOCH:  49
+Using GPU
+EPOCH:  50
+Using GPU
+EPOCH:  51
+Using GPU
+EPOCH:  52
+Using GPU
+EPOCH:  53
+Using GPU
+EPOCH:  54
+Using GPU
+EPOCH:  55
+Using GPU
+EPOCH:  56
+Using GPU
+EPOCH:  57
+Using GPU
+EPOCH:  58
+Using GPU
+EPOCH:  59
+Using GPU
+EPOCH:  60
+Using GPU
+EPOCH:  61
+Using GPU
+EPOCH:  62
+Using GPU
+EPOCH:  63
+Using GPU
+EPOCH:  64
+Using GPU
+EPOCH:  65
+Using GPU
+EPOCH:  66
+Using GPU
+EPOCH:  67
+Using GPU
+EPOCH:  68
+Using GPU
+EPOCH:  69
+Using GPU
+EPOCH:  70
+Using GPU
+EPOCH:  71
+Using GPU
+EPOCH:  72
+Using GPU
+EPOCH:  73
+Using GPU
+EPOCH:  74
+Using GPU
+EPOCH:  75
+Using GPU
+EPOCH:  76
+Using GPU
+EPOCH:  77
+Using GPU
+EPOCH:  78
+Using GPU
+EPOCH:  79
+Using GPU
+EPOCH:  80
+Using GPU
+EPOCH:  81
+Using GPU
+EPOCH:  82
+Using GPU
+EPOCH:  83
+Using GPU
+EPOCH:  84
+Using GPU
+EPOCH:  85
+Using GPU
+EPOCH:  86
+Using GPU
+EPOCH:  87
+Using GPU
+EPOCH:  88
+Using GPU
+EPOCH:  89
+Using GPU
+EPOCH:  90
+Using GPU
+EPOCH:  91
+Using GPU
+EPOCH:  92
+Using GPU
+EPOCH:  93
+Using GPU
+EPOCH:  94
+Using GPU
+EPOCH:  95
+Using GPU
+EPOCH:  96
+Using GPU
+EPOCH:  97
+Using GPU
+EPOCH:  98
+Using GPU
+EPOCH:  99
+lr:0.1, bs:64, val_loss:5.199185833334923, balanced acc:0.4178523481405584
+loss: 4.446515679359436 | acc: 42.0 | acc2: 0 | balanced_acc: 0.4178523481405584 | auc: 0.8239142647177281 | acc_detailed: [57.0093,51.0417,24.    ,27.5862,36.2637,31.3725,53.8462,45.8716,51.9231,
+ 38.9381] | map: 27.963045838136193 | 
+3000,42.0,random,2.8971543903741193
+best hyperparameters : lr 0.1, batch size 64
+time for querying 0.3325951099395752
+time for training 307.79129099845886
+3000,random,0.3325951099395752,307.79129099845886
+entropy cost
+4000,random,89.4511890411377
+gap cost
+4000,random,117.86005020141602
+4000,random,3.7070723550939624
+entropy 2 cost
+4000,random,3690.0219116210938
+Steps per epoch: 63.
+Using GPU
+STARTED TRAINING
+Using GPU
+EPOCH:  0
+Using GPU
+EPOCH:  1
+Using GPU
+EPOCH:  2
+Using GPU
+EPOCH:  3
+Using GPU
+EPOCH:  4
+Using GPU
+EPOCH:  5
+Using GPU
+EPOCH:  6
+Using GPU
+EPOCH:  7
+Using GPU
+EPOCH:  8
+Using GPU
+EPOCH:  9
+Using GPU
+EPOCH:  10
+Using GPU
+EPOCH:  11
+Using GPU
+EPOCH:  12
+Using GPU
+EPOCH:  13
+Using GPU
+EPOCH:  14
+Using GPU
+EPOCH:  15
+Using GPU
+EPOCH:  16
+Using GPU
+EPOCH:  17
+Using GPU
+EPOCH:  18
+Using GPU
+EPOCH:  19
+Using GPU
+EPOCH:  20
+Using GPU
+EPOCH:  21
+Using GPU
+EPOCH:  22
+Using GPU
+EPOCH:  23
+Using GPU
+EPOCH:  24
+Using GPU
+EPOCH:  25
+Using GPU
+EPOCH:  26
+Using GPU
+EPOCH:  27
+Using GPU
+EPOCH:  28
+Using GPU
+EPOCH:  29
+Using GPU
+EPOCH:  30
+Using GPU
+EPOCH:  31
+Using GPU
+EPOCH:  32
+Using GPU
+EPOCH:  33
+Using GPU
+EPOCH:  34
+Using GPU
+EPOCH:  35
+Using GPU
+EPOCH:  36
+Using GPU
+EPOCH:  37
+Using GPU
+EPOCH:  38
+Using GPU
+EPOCH:  39
+Using GPU
+EPOCH:  40
+Using GPU
+EPOCH:  41
+Using GPU
+EPOCH:  42
+Using GPU
+EPOCH:  43
+Using GPU
+EPOCH:  44
+Using GPU
+EPOCH:  45
+Using GPU
+EPOCH:  46
+Using GPU
+EPOCH:  47
+Using GPU
+EPOCH:  48
+Using GPU
+EPOCH:  49
+Using GPU
+EPOCH:  50
+Using GPU
+EPOCH:  51
+Using GPU
+EPOCH:  52
+Using GPU
+EPOCH:  53
+Using GPU
+EPOCH:  54
+Using GPU
+EPOCH:  55
+Using GPU
+EPOCH:  56
+Using GPU
+EPOCH:  57
+Using GPU
+EPOCH:  58
+Using GPU
+EPOCH:  59
+Using GPU
+EPOCH:  60
+Using GPU
+EPOCH:  61
+Using GPU
+EPOCH:  62
+Using GPU
+EPOCH:  63
+Using GPU
+EPOCH:  64
+Using GPU
+EPOCH:  65
+Using GPU
+EPOCH:  66
+Using GPU
+EPOCH:  67
+Using GPU
+EPOCH:  68
+Using GPU
+EPOCH:  69
+Using GPU
+EPOCH:  70
+Using GPU
+EPOCH:  71
+Using GPU
+EPOCH:  72
+Using GPU
+EPOCH:  73
+Using GPU
+EPOCH:  74
+Using GPU
+EPOCH:  75
+Using GPU
+EPOCH:  76
+Using GPU
+EPOCH:  77
+Using GPU
+EPOCH:  78
+Using GPU
+EPOCH:  79
+Using GPU
+EPOCH:  80
+Using GPU
+EPOCH:  81
+Using GPU
+EPOCH:  82
+Using GPU
+EPOCH:  83
+Using GPU
+EPOCH:  84
+Using GPU
+EPOCH:  85
+Using GPU
+EPOCH:  86
+Using GPU
+EPOCH:  87
+Using GPU
+EPOCH:  88
+Using GPU
+EPOCH:  89
+Using GPU
+EPOCH:  90
+Using GPU
+EPOCH:  91
+Using GPU
+EPOCH:  92
+Using GPU
+EPOCH:  93
+Using GPU
+EPOCH:  94
+Using GPU
+EPOCH:  95
+Using GPU
+EPOCH:  96
+Using GPU
+EPOCH:  97
+Using GPU
+EPOCH:  98
+Using GPU
+EPOCH:  99
+lr:0.1, bs:64, val_loss:3.650265648961067, balanced acc:0.485424970255193
+loss: 3.4856586903333664 | acc: 48.8 | acc2: 0 | balanced_acc: 0.485424970255193 | auc: 0.862869666041602 | acc_detailed: [53.271 ,46.875 ,39.    ,28.7356,47.2527,40.1961,64.8352,48.6239,64.4231,
+ 52.2124] | map: 34.64643286264234 | 
+4000,48.8,random,3.7070723550939624
+best hyperparameters : lr 0.1, batch size 64
+time for querying 0.3316946029663086
+time for training 385.3306841850281
+4000,random,0.3316946029663086,385.3306841850281
+entropy cost
+5000,random,111.33748054504395
+gap cost
+5000,random,145.3845729827881
+5000,random,4.51691009704657
+entropy 2 cost
+5000,random,4612.78173828125
+Steps per epoch: 79.
+Using GPU
+STARTED TRAINING
+Using GPU
+EPOCH:  0
+Using GPU
+EPOCH:  1
+Using GPU
+EPOCH:  2
+Using GPU
+EPOCH:  3
+Using GPU
+EPOCH:  4
+Using GPU
+EPOCH:  5
+Using GPU
+EPOCH:  6
+Using GPU
+EPOCH:  7
+Using GPU
+EPOCH:  8
+Using GPU
+EPOCH:  9
+Using GPU
+EPOCH:  10
+Using GPU
+EPOCH:  11
+Using GPU
+EPOCH:  12
+Using GPU
+EPOCH:  13
+Using GPU
+EPOCH:  14
+Using GPU
+EPOCH:  15
+Using GPU
+EPOCH:  16
+Using GPU
+EPOCH:  17
+Using GPU
+EPOCH:  18
+Using GPU
+EPOCH:  19
+Using GPU
+EPOCH:  20
+Using GPU
+EPOCH:  21
+Using GPU
+EPOCH:  22
+Using GPU
+EPOCH:  23
+Using GPU
+EPOCH:  24
+Using GPU
+EPOCH:  25
+Using GPU
+EPOCH:  26
+Using GPU
+EPOCH:  27
+Using GPU
+EPOCH:  28
+Using GPU
+EPOCH:  29
+Using GPU
+EPOCH:  30
+Using GPU
+EPOCH:  31
+Using GPU
+EPOCH:  32
+Using GPU
+EPOCH:  33
+Using GPU
+EPOCH:  34
+Using GPU
+EPOCH:  35
+Using GPU
+EPOCH:  36
+Using GPU
+EPOCH:  37
+Using GPU
+EPOCH:  38
+Using GPU
+EPOCH:  39
+Using GPU
+EPOCH:  40
+Using GPU
+EPOCH:  41
+Using GPU
+EPOCH:  42
+Using GPU
+EPOCH:  43
+Using GPU
+EPOCH:  44
+Using GPU
+EPOCH:  45
+Using GPU
+EPOCH:  46
+Using GPU
+EPOCH:  47
+Using GPU
+EPOCH:  48
+Using GPU
+EPOCH:  49
+Using GPU
+EPOCH:  50
+Using GPU
+EPOCH:  51
+Using GPU
+EPOCH:  52
+Using GPU
+EPOCH:  53
+Using GPU
+EPOCH:  54
+Using GPU
+EPOCH:  55
+Using GPU
+EPOCH:  56
+Using GPU
+EPOCH:  57
+Using GPU
+EPOCH:  58
+Using GPU
+EPOCH:  59
+Using GPU
+EPOCH:  60
+Using GPU
+EPOCH:  61
+Using GPU
+EPOCH:  62
+Using GPU
+EPOCH:  63
+Using GPU
+EPOCH:  64
+Using GPU
+EPOCH:  65
+Using GPU
+EPOCH:  66
+Using GPU
+EPOCH:  67
+Using GPU
+EPOCH:  68
+Using GPU
+EPOCH:  69
+Using GPU
+EPOCH:  70
+Using GPU
+EPOCH:  71
+Using GPU
+EPOCH:  72
+Using GPU
+EPOCH:  73
+Using GPU
+EPOCH:  74
+Using GPU
+EPOCH:  75
+Using GPU
+EPOCH:  76
+Using GPU
+EPOCH:  77
+Using GPU
+EPOCH:  78
+Using GPU
+EPOCH:  79
+Using GPU
+EPOCH:  80
+Using GPU
+EPOCH:  81
+Using GPU
+EPOCH:  82
+Using GPU
+EPOCH:  83
+Using GPU
+EPOCH:  84
+Using GPU
+EPOCH:  85
+Using GPU
+EPOCH:  86
+Using GPU
+EPOCH:  87
+Using GPU
+EPOCH:  88
+Using GPU
+EPOCH:  89
+Using GPU
+EPOCH:  90
+Using GPU
+EPOCH:  91
+Using GPU
+EPOCH:  92
+Using GPU
+EPOCH:  93
+Using GPU
+EPOCH:  94
+Using GPU
+EPOCH:  95
+Using GPU
+EPOCH:  96
+Using GPU
+EPOCH:  97
+Using GPU
+EPOCH:  98
+Using GPU
+EPOCH:  99
+lr:0.1, bs:64, val_loss:7.513927310705185, balanced acc:0.5323527798621216
+loss: 3.1515745520591736 | acc: 53.6 | acc2: 0 | balanced_acc: 0.5323527798621216 | auc: 0.8912266911816867 | acc_detailed: [66.3551,59.375 ,47.    ,36.7816,48.3516,36.2745,58.2418,57.7982,67.3077,
+ 54.8673] | map: 38.63832759668659 | 
+5000,53.6,random,4.51691009704657
+best hyperparameters : lr 0.1, batch size 64
+time for querying 0.32985854148864746
+time for training 467.16569566726685
+5000,random,0.32985854148864746,467.16569566726685
+entropy cost
+6000,random,131.93299293518066
+gap cost
+6000,random,172.41013526916504
+6000,random,5.039750151739294
+entropy 2 cost
+6000,random,5535.2276611328125
+Steps per epoch: 94.
+Using GPU
+STARTED TRAINING
+Using GPU
+EPOCH:  0
+Using GPU
+EPOCH:  1
+Using GPU
+EPOCH:  2
+Using GPU
+EPOCH:  3
+Using GPU
+EPOCH:  4
+Using GPU
+EPOCH:  5
+Using GPU
+EPOCH:  6
+Using GPU
+EPOCH:  7
+Using GPU
+EPOCH:  8
+Using GPU
+EPOCH:  9
+Using GPU
+EPOCH:  10
+Using GPU
+EPOCH:  11
+Using GPU
+EPOCH:  12
+Using GPU
+EPOCH:  13
+Using GPU
+EPOCH:  14
+Using GPU
+EPOCH:  15
+Using GPU
+EPOCH:  16
+Using GPU
+EPOCH:  17
+Using GPU
+EPOCH:  18
+Using GPU
+EPOCH:  19
+Using GPU
+EPOCH:  20
+Using GPU
+EPOCH:  21
+Using GPU
+EPOCH:  22
+Using GPU
+EPOCH:  23
+Using GPU
+EPOCH:  24
+Using GPU
+EPOCH:  25
+Using GPU
+EPOCH:  26
+Using GPU
+EPOCH:  27
+Using GPU
+EPOCH:  28
+Using GPU
+EPOCH:  29
+Using GPU
+EPOCH:  30
+Using GPU
+EPOCH:  31
+Using GPU
+EPOCH:  32
+Using GPU
+EPOCH:  33
+Using GPU
+EPOCH:  34
+Using GPU
+EPOCH:  35
+Using GPU
+EPOCH:  36
+Using GPU
+EPOCH:  37
+Using GPU
+EPOCH:  38
+Using GPU
+EPOCH:  39
+Using GPU
+EPOCH:  40
+Using GPU
+EPOCH:  41
+Using GPU
+EPOCH:  42
+Using GPU
+EPOCH:  43
+Using GPU
+EPOCH:  44
+Using GPU
+EPOCH:  45
+Using GPU
+EPOCH:  46
+Using GPU
+EPOCH:  47
+Using GPU
+EPOCH:  48
+Using GPU
+EPOCH:  49
+Using GPU
+EPOCH:  50
+Using GPU
+EPOCH:  51
+Using GPU
+EPOCH:  52
+Using GPU
+EPOCH:  53
+Using GPU
+EPOCH:  54
+Using GPU
+EPOCH:  55
+Using GPU
+EPOCH:  56
+Using GPU
+EPOCH:  57
+Using GPU
+EPOCH:  58
+Using GPU
+EPOCH:  59
+Using GPU
+EPOCH:  60
+Using GPU
+EPOCH:  61
+Using GPU
+EPOCH:  62
+Using GPU
+EPOCH:  63
+Using GPU
+EPOCH:  64
+Using GPU
+EPOCH:  65
+Using GPU
+EPOCH:  66
+Using GPU
+EPOCH:  67
+Using GPU
+EPOCH:  68
+Using GPU
+EPOCH:  69
+Using GPU
+EPOCH:  70
+Using GPU
+EPOCH:  71
+Using GPU
+EPOCH:  72
+Using GPU
+EPOCH:  73
+Using GPU
+EPOCH:  74
+Using GPU
+EPOCH:  75
+Using GPU
+EPOCH:  76
+Using GPU
+EPOCH:  77
+Using GPU
+EPOCH:  78
+Using GPU
+EPOCH:  79
+Using GPU
+EPOCH:  80
+Using GPU
+EPOCH:  81
+Using GPU
+EPOCH:  82
+Using GPU
+EPOCH:  83
+Using GPU
+EPOCH:  84
+Using GPU
+EPOCH:  85
+Using GPU
+EPOCH:  86
+Using GPU
+EPOCH:  87
+Using GPU
+EPOCH:  88
+Using GPU
+EPOCH:  89
+Using GPU
+EPOCH:  90
+Using GPU
+EPOCH:  91
+Using GPU
+EPOCH:  92
+Using GPU
+EPOCH:  93
+Using GPU
+EPOCH:  94
+Using GPU
+EPOCH:  95
+Using GPU
+EPOCH:  96
+Using GPU
+EPOCH:  97
+Using GPU
+EPOCH:  98
+Using GPU
+EPOCH:  99
+lr:0.1, bs:64, val_loss:3.283631056547165, balanced acc:0.5541902235259939
+loss: 2.7322236448526382 | acc: 55.9 | acc2: 0 | balanced_acc: 0.5541902235259939 | auc: 0.890782303033058 | acc_detailed: [61.6822,62.5   ,44.    ,36.7816,49.4505,42.1569,60.4396,62.3853,70.1923,
+ 64.6018] | map: 41.31783352242895 | 
+6000,55.9,random,5.039750151739294
+best hyperparameters : lr 0.1, batch size 64
+time for querying 0.3298673629760742
+time for training 542.5246136188507
+6000,random,0.3298673629760742,542.5246136188507
+entropy cost
+7000,random,151.9926929473877
+gap cost
+7000,random,198.01228523254395
+7000,random,5.463934253188336
+entropy 2 cost
+7000,random,6457.55224609375
+Steps per epoch: 110.
+Using GPU
+STARTED TRAINING
+Using GPU
+EPOCH:  0
+Using GPU
+EPOCH:  1
+Using GPU
+EPOCH:  2
+Using GPU
+EPOCH:  3
+Using GPU
+EPOCH:  4
+Using GPU
+EPOCH:  5
+Using GPU
+EPOCH:  6
+Using GPU
+EPOCH:  7
+Using GPU
+EPOCH:  8
+Using GPU
+EPOCH:  9
+Using GPU
+EPOCH:  10
+Using GPU
+EPOCH:  11
+Using GPU
+EPOCH:  12
+Using GPU
+EPOCH:  13
+Using GPU
+EPOCH:  14
+Using GPU
+EPOCH:  15
+Using GPU
+EPOCH:  16
+Using GPU
+EPOCH:  17
+Using GPU
+EPOCH:  18
+Using GPU
+EPOCH:  19
+Using GPU
+EPOCH:  20
+Using GPU
+EPOCH:  21
+Using GPU
+EPOCH:  22
+Using GPU
+EPOCH:  23
+Using GPU
+EPOCH:  24
+Using GPU
+EPOCH:  25
+Using GPU
+EPOCH:  26
+Using GPU
+EPOCH:  27
+Using GPU
+EPOCH:  28
+Using GPU
+EPOCH:  29
+Using GPU
+EPOCH:  30
+Using GPU
+EPOCH:  31
+Using GPU
+EPOCH:  32
+Using GPU
+EPOCH:  33
+Using GPU
+EPOCH:  34
+Using GPU
+EPOCH:  35
+Using GPU
+EPOCH:  36
+Using GPU
+EPOCH:  37
+Using GPU
+EPOCH:  38
+Using GPU
+EPOCH:  39
+Using GPU
+EPOCH:  40
+Using GPU
+EPOCH:  41
+Using GPU
+EPOCH:  42
+Using GPU
+EPOCH:  43
+Using GPU
+EPOCH:  44
+Using GPU
+EPOCH:  45
+Using GPU
+EPOCH:  46
+Using GPU
+EPOCH:  47
+Using GPU
+EPOCH:  48
+Using GPU
+EPOCH:  49
+Using GPU
+EPOCH:  50
+Using GPU
+EPOCH:  51
+Using GPU
+EPOCH:  52
+Using GPU
+EPOCH:  53
+Using GPU
+EPOCH:  54
+Using GPU
+EPOCH:  55
+Using GPU
+EPOCH:  56
+Using GPU
+EPOCH:  57
+Using GPU
+EPOCH:  58
+Using GPU
+EPOCH:  59
+Using GPU
+EPOCH:  60
+Using GPU
+EPOCH:  61
+Using GPU
+EPOCH:  62
+Using GPU
+EPOCH:  63
+Using GPU
+EPOCH:  64
+Using GPU
+EPOCH:  65
+Using GPU
+EPOCH:  66
+Using GPU
+EPOCH:  67
+Using GPU
+EPOCH:  68
+Using GPU
+EPOCH:  69
+Using GPU
+EPOCH:  70
+Using GPU
+EPOCH:  71
+Using GPU
+EPOCH:  72
+Using GPU
+EPOCH:  73
+Using GPU
+EPOCH:  74
+Using GPU
+EPOCH:  75
+Using GPU
+EPOCH:  76
+Using GPU
+EPOCH:  77
+Using GPU
+EPOCH:  78
+Using GPU
+EPOCH:  79
+Using GPU
+EPOCH:  80
+Using GPU
+EPOCH:  81
+Using GPU
+EPOCH:  82
+Using GPU
+EPOCH:  83
+Using GPU
+EPOCH:  84
+Using GPU
+EPOCH:  85
+Using GPU
+EPOCH:  86
+Using GPU
+EPOCH:  87
+Using GPU
+EPOCH:  88
+Using GPU
+EPOCH:  89
+Using GPU
+EPOCH:  90
+Using GPU
+EPOCH:  91
+Using GPU
+EPOCH:  92
+Using GPU
+EPOCH:  93
+Using GPU
+EPOCH:  94
+Using GPU
+EPOCH:  95
+Using GPU
+EPOCH:  96
+Using GPU
+EPOCH:  97
+Using GPU
+EPOCH:  98
+Using GPU
+EPOCH:  99
+lr:0.1, bs:64, val_loss:3.406837120652199, balanced acc:0.5574414924518436
+loss: 2.857602931559086 | acc: 56.4 | acc2: 0 | balanced_acc: 0.5574414924518436 | auc: 0.9012699294734532 | acc_detailed: [69.1589,67.7083,40.    ,32.1839,47.2527,40.1961,57.1429,67.8899,73.0769,
+ 62.8319] | map: 41.94490104935703 | 
+7000,56.4,random,5.463934253188336
+best hyperparameters : lr 0.1, batch size 64
+time for querying 0.3295152187347412
+time for training 620.3586530685425
+7000,random,0.3295152187347412,620.3586530685425
+entropy cost
+8000,random,173.79547500610352
+gap cost
+8000,random,226.55743217468262
+8000,random,6.02324761948076
+entropy 2 cost
+8000,random,7380.206604003906
+Steps per epoch: 125.
+Using GPU
+STARTED TRAINING
+Using GPU
+EPOCH:  0
+Using GPU
+EPOCH:  1
+Using GPU
+EPOCH:  2
+Using GPU
+EPOCH:  3
+Using GPU
+EPOCH:  4
+Using GPU
+EPOCH:  5
+Using GPU
+EPOCH:  6
+Using GPU
+EPOCH:  7
+Using GPU
+EPOCH:  8
+Using GPU
+EPOCH:  9
+Using GPU
+EPOCH:  10
+Using GPU
+EPOCH:  11
+Using GPU
+EPOCH:  12
+Using GPU
+EPOCH:  13
+Using GPU
+EPOCH:  14
+Using GPU
+EPOCH:  15
+Using GPU
+EPOCH:  16
+Using GPU
+EPOCH:  17
+Using GPU
+EPOCH:  18
+Using GPU
+EPOCH:  19
+Using GPU
+EPOCH:  20
+Using GPU
+EPOCH:  21
+Using GPU
+EPOCH:  22
+Using GPU
+EPOCH:  23
+Using GPU
+EPOCH:  24
+Using GPU
+EPOCH:  25
+Using GPU
+EPOCH:  26
+Using GPU
+EPOCH:  27
+Using GPU
+EPOCH:  28
+Using GPU
+EPOCH:  29
+Using GPU
+EPOCH:  30
+Using GPU
+EPOCH:  31
+Using GPU
+EPOCH:  32
+Using GPU
+EPOCH:  33
+Using GPU
+EPOCH:  34
+Using GPU
+EPOCH:  35
+Using GPU
+EPOCH:  36
+Using GPU
+EPOCH:  37
+Using GPU
+EPOCH:  38
+Using GPU
+EPOCH:  39
+Using GPU
+EPOCH:  40
+Using GPU
+EPOCH:  41
+Using GPU
+EPOCH:  42
+Using GPU
+EPOCH:  43
+Using GPU
+EPOCH:  44
+Using GPU
+EPOCH:  45
+Using GPU
+EPOCH:  46
+Using GPU
+EPOCH:  47
+Using GPU
+EPOCH:  48
+Using GPU
+EPOCH:  49
+Using GPU
+EPOCH:  50
+Using GPU
+EPOCH:  51
+Using GPU
+EPOCH:  52
+Using GPU
+EPOCH:  53
+Using GPU
+EPOCH:  54
+Using GPU
+EPOCH:  55
+Using GPU
+EPOCH:  56
+Using GPU
+EPOCH:  57
+Using GPU
+EPOCH:  58
+Using GPU
+EPOCH:  59
+Using GPU
+EPOCH:  60
+Using GPU
+EPOCH:  61
+Using GPU
+EPOCH:  62
+Using GPU
+EPOCH:  63
+Using GPU
+EPOCH:  64
+Using GPU
+EPOCH:  65
+Using GPU
+EPOCH:  66
+Using GPU
+EPOCH:  67
+Using GPU
+EPOCH:  68
+Using GPU
+EPOCH:  69
+Using GPU
+EPOCH:  70
+Using GPU
+EPOCH:  71
+Using GPU
+EPOCH:  72
+Using GPU
+EPOCH:  73
+Using GPU
+EPOCH:  74
+Using GPU
+EPOCH:  75
+Using GPU
+EPOCH:  76
+Using GPU
+EPOCH:  77
+Using GPU
+EPOCH:  78
+Using GPU
+EPOCH:  79
+Using GPU
+EPOCH:  80
+Using GPU
+EPOCH:  81
+Using GPU
+EPOCH:  82
+Using GPU
+EPOCH:  83
+Using GPU
+EPOCH:  84
+Using GPU
+EPOCH:  85
+Using GPU
+EPOCH:  86
+Using GPU
+EPOCH:  87
+Using GPU
+EPOCH:  88
+Using GPU
+EPOCH:  89
+Using GPU
+EPOCH:  90
+Using GPU
+EPOCH:  91
+Using GPU
+EPOCH:  92
+Using GPU
+EPOCH:  93
+Using GPU
+EPOCH:  94
+Using GPU
+EPOCH:  95
+Using GPU
+EPOCH:  96
+Using GPU
+EPOCH:  97
+Using GPU
+EPOCH:  98
+Using GPU
+EPOCH:  99
+lr:0.1, bs:64, val_loss:3.2923836559057236, balanced acc:0.5665284602869142
+loss: 2.816803626716137 | acc: 57.0 | acc2: 0 | balanced_acc: 0.5665284602869142 | auc: 0.8995613291915794 | acc_detailed: [63.5514,65.625 ,49.    ,39.0805,48.3516,41.1765,67.033 ,63.3028,69.2308,
+ 60.177 ] | map: 42.16885450266627 | 
+8000,57.0,random,6.02324761948076
+best hyperparameters : lr 0.1, batch size 64
+time for querying 0.3295938968658447
+time for training 696.5882830619812
+8000,random,0.3295938968658447,696.5882830619812
+entropy cost
+9000,random,196.34219360351562
+gap cost
+9000,random,255.38219261169434
+9000,random,6.584348057650118
+entropy 2 cost
+9000,random,8303.396484375
+Steps per epoch: 141.
+Using GPU
+STARTED TRAINING
+Using GPU
+EPOCH:  0
+Using GPU
+EPOCH:  1
+Using GPU
+EPOCH:  2
+Using GPU
+EPOCH:  3
+Using GPU
+EPOCH:  4
+Using GPU
+EPOCH:  5
+Using GPU
+EPOCH:  6
+Using GPU
+EPOCH:  7
+Using GPU
+EPOCH:  8
+Using GPU
+EPOCH:  9
+Using GPU
+EPOCH:  10
+Using GPU
+EPOCH:  11
+Using GPU
+EPOCH:  12
+Using GPU
+EPOCH:  13
+Using GPU
+EPOCH:  14
+Using GPU
+EPOCH:  15
+Using GPU
+EPOCH:  16
+Using GPU
+EPOCH:  17
+Using GPU
+EPOCH:  18
+Using GPU
+EPOCH:  19
+Using GPU
+EPOCH:  20
+Using GPU
+EPOCH:  21
+Using GPU
+EPOCH:  22
+Using GPU
+EPOCH:  23
+Using GPU
+EPOCH:  24
+Using GPU
+EPOCH:  25
+Using GPU
+EPOCH:  26
+Using GPU
+EPOCH:  27
+Using GPU
+EPOCH:  28
+Using GPU
+EPOCH:  29
+Using GPU
+EPOCH:  30
+Using GPU
+EPOCH:  31
+Using GPU
+EPOCH:  32
+Using GPU
+EPOCH:  33
+Using GPU
+EPOCH:  34
+Using GPU
+EPOCH:  35
+Using GPU
+EPOCH:  36
+Using GPU
+EPOCH:  37
+Using GPU
+EPOCH:  38
+Using GPU
+EPOCH:  39
+Using GPU
+EPOCH:  40
+Using GPU
+EPOCH:  41
+Using GPU
+EPOCH:  42
+Using GPU
+EPOCH:  43
+Using GPU
+EPOCH:  44
+Using GPU
+EPOCH:  45
+Using GPU
+EPOCH:  46
+Using GPU
+EPOCH:  47
+Using GPU
+EPOCH:  48
+Using GPU
+EPOCH:  49
+Using GPU
+EPOCH:  50
+Using GPU
+EPOCH:  51
+Using GPU
+EPOCH:  52
+Using GPU
+EPOCH:  53
+Using GPU
+EPOCH:  54
+Using GPU
+EPOCH:  55
+Using GPU
+EPOCH:  56
+Using GPU
+EPOCH:  57
+Using GPU
+EPOCH:  58
+Using GPU
+EPOCH:  59
+Using GPU
+EPOCH:  60
+Using GPU
+EPOCH:  61
+Using GPU
+EPOCH:  62
+Using GPU
+EPOCH:  63
+Using GPU
+EPOCH:  64
+Using GPU
+EPOCH:  65
+Using GPU
+EPOCH:  66
+Using GPU
+EPOCH:  67
+Using GPU
+EPOCH:  68
+Using GPU
+EPOCH:  69
+Using GPU
+EPOCH:  70
+Using GPU
+EPOCH:  71
+Using GPU
+EPOCH:  72
+Using GPU
+EPOCH:  73
+Using GPU
+EPOCH:  74
+Using GPU
+EPOCH:  75
+Using GPU
+EPOCH:  76
+Using GPU
+EPOCH:  77
+Using GPU
+EPOCH:  78
+Using GPU
+EPOCH:  79
+Using GPU
+EPOCH:  80
+Using GPU
+EPOCH:  81
+Using GPU
+EPOCH:  82
+Using GPU
+EPOCH:  83
+Using GPU
+EPOCH:  84
+Using GPU
+EPOCH:  85
+Using GPU
+EPOCH:  86
+Using GPU
+EPOCH:  87
+Using GPU
+EPOCH:  88
+Using GPU
+EPOCH:  89
+Using GPU
+EPOCH:  90
+Using GPU
+EPOCH:  91
+Using GPU
+EPOCH:  92
+Using GPU
+EPOCH:  93
+Using GPU
+EPOCH:  94
+Using GPU
+EPOCH:  95
+Using GPU
+EPOCH:  96
+Using GPU
+EPOCH:  97
+Using GPU
+EPOCH:  98
+Using GPU
+EPOCH:  99
+lr:0.1, bs:64, val_loss:3.0083779096603394, balanced acc:0.6039412586468117
+loss: 2.396375559270382 | acc: 60.7 | acc2: 0 | balanced_acc: 0.6039412586468117 | auc: 0.9162466971017995 | acc_detailed: [69.1589,69.7917,39.    ,50.5747,54.9451,48.0392,65.9341,66.9725,74.0385,
+ 65.4867] | map: 45.35012310447043 | 
+9000,60.7,random,6.584348057650118
+best hyperparameters : lr 0.1, batch size 64
+time for querying 0.32985687255859375
+time for training 779.8800759315491
+9000,random,0.32985687255859375,779.8800759315491
+elapsed time: 4272.7672481536865
+

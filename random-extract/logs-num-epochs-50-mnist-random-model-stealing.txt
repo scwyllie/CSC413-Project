@@ -1,0 +1,51 @@
+Training adaptive model on 'mnist' dataset!
+Training adaptive model on 'MnistNetPate' architecture!
+Number of private models: 1
+Initial learning rate: 0.1.
+Number of epochs for training each model: 50
+Label counts for eval set: [ 980, 1135, 1032, 1010,  982,  892,  958, 1028,  974, 1009].
+Class ratios for eval set: [ 9.8 , 11.35, 10.32, 10.1 ,  9.82,  8.92,  9.58, 10.28,  9.74, 10.09].
+Number of eval samples: 10000.
+accuracy of victim: 99.39.
+Steps per epoch: 16.
+loss: 0.30281730413234925 | acc: 94.1 | acc2: 0 | balanced_acc: 0.9403468914970887 | auc: 0.9972068467324245 | acc_detailed: [97.8571,96.2996,93.4109,95.0495,94.9084,91.2556,92.2756,93.677 ,90.9651,
+ 94.6482] | map: 89.9011449711112 | 
+best hyperparameters : lr 0.1, batch size 64
+Steps per epoch: 32.
+loss: 0.1739677681170523 | acc: 96.38 | acc2: 0 | balanced_acc: 0.9637384826594471 | auc: 0.9989786242455011 | acc_detailed: [98.9796,97.533 ,95.7364,97.1287,96.945 ,96.4126,96.3466,94.4553,94.6612,
+ 95.5401] | map: 93.82677552016561 | 
+best hyperparameters : lr 0.1, batch size 64
+Steps per epoch: 47.
+loss: 0.1440596290602063 | acc: 96.94 | acc2: 0 | balanced_acc: 0.9690317311159429 | auc: 0.9993470536880663 | acc_detailed: [98.9796,99.2952,96.5116,98.0198,97.1487,96.0762,96.4509,95.6226,95.5852,
+ 95.3419] | map: 94.56556170965422 | 
+best hyperparameters : lr 0.1, batch size 64
+Steps per epoch: 63.
+loss: 0.11578208036549961 | acc: 97.58 | acc2: 0 | balanced_acc: 0.9756128434179182 | auc: 0.9995361753864287 | acc_detailed: [98.9796,99.207 ,96.9961,98.0198,97.7597,97.6457,97.0772,96.8872,96.5092,
+ 96.5312] | map: 95.92681389868083 | 
+best hyperparameters : lr 0.1, batch size 64
+Steps per epoch: 79.
+loss: 0.09639010681443379 | acc: 97.78 | acc2: 0 | balanced_acc: 0.9776123332085465 | auc: 0.9996722533520811 | acc_detailed: [98.9796,98.8546,97.7713,98.5149,98.2688,97.1973,97.4948,97.179 ,96.9199,
+ 96.4321] | map: 96.02366496770344 | 
+best hyperparameters : lr 0.1, batch size 64
+Steps per epoch: 94.
+loss: 0.09009822693859765 | acc: 98.09 | acc2: 0 | balanced_acc: 0.9807219675199119 | auc: 0.9997042799469719 | acc_detailed: [99.2857,99.3833,97.7713,98.0198,98.8798,97.4215,97.7035,96.8872,97.9466,
+ 97.4232] | map: 96.75588215800761 | 
+best hyperparameters : lr 0.1, batch size 64
+Steps per epoch: 110.
+loss: 0.08244025160719197 | acc: 98.16 | acc2: 0 | balanced_acc: 0.9814611346074111 | auc: 0.9997470328938329 | acc_detailed: [99.2857,99.2952,97.8682,98.4158,98.5743,97.9821,97.4948,97.5681,98.0493,
+ 96.9277] | map: 96.99758204334171 | 
+best hyperparameters : lr 0.1, batch size 64
+Steps per epoch: 125.
+loss: 0.08009219057570824 | acc: 98.18 | acc2: 0 | balanced_acc: 0.9816083102591888 | auc: 0.9997725900876222 | acc_detailed: [99.1837,99.3833,98.4496,98.4158,97.8615,97.7578,97.8079,97.4708,98.152 ,
+ 97.1259] | map: 96.85823031760108 | 
+best hyperparameters : lr 0.1, batch size 64
+Steps per epoch: 141.
+loss: 0.07365581959149856 | acc: 98.32 | acc2: 0 | balanced_acc: 0.9830392904705925 | auc: 0.9997973631505016 | acc_detailed: [99.0816,99.2952,97.9651,98.4158,98.3707,97.87  ,98.0167,98.1518,98.152 ,
+ 97.7205] | map: 97.16480783920976 | 
+best hyperparameters : lr 0.1, batch size 64
+Steps per epoch: 157.
+loss: 0.06602510014046903 | acc: 98.37 | acc2: 0 | balanced_acc: 0.9835531363526314 | auc: 0.9998110785935217 | acc_detailed: [98.9796,99.5595,98.4496,98.7129,98.3707,98.5426,98.0167,98.0545,97.7413,
+ 97.1259] | map: 97.21895157769781 | 
+best hyperparameters : lr 0.1, batch size 64
+elapsed time: 2814.793225288391
+

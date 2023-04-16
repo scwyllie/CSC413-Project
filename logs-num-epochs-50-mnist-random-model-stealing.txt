@@ -1,0 +1,8 @@
+Training adaptive model on 'mnist' dataset!
+Training adaptive model on 'MnistNetPate' architecture!
+Number of private models: 1
+Initial learning rate: 0.1.
+Number of epochs for training each model: 50
+Label counts for eval set: [ 980, 1135, 1032, 1010,  982,  892,  958, 1028,  974, 1009].
+Class ratios for eval set: [ 9.8 , 11.35, 10.32, 10.1 ,  9.82,  8.92,  9.58, 10.28,  9.74, 10.09].
+Number of eval samples: 10000.

@@ -1,0 +1,20 @@
+##########################################
+Training private models on 'mnist' dataset!
+Training private models on 'MnistNetPate' architecture!
+Number of private models: 1
+Initial learning rate: 0.1.
+Number of epochs for training each model: 50
+Label counts for eval set: [ 980, 1135, 1032, 1010,  982,  892,  958, 1028,  974, 1009].
+Class ratios for eval set: [ 9.8 , 11.35, 10.32, 10.1 ,  9.82,  8.92,  9.58, 10.28,  9.74, 10.09].
+Number of eval samples: 10000.
+##########################################
+Label counts for private train set: [5923, 6742, 5958, 6131, 5842, 5421, 5918, 6265, 5851, 5949].
+Class ratios for private train set: [ 9.87, 11.24,  9.93, 10.22,  9.74,  9.04,  9.86, 10.44,  9.75,  9.91].
+Number of private train samples: 60000.
+Steps per epoch: 938
+loss: 0.02237721302672497 | acc: 99.39 | acc2: 0 | balanced_acc: 0.9938223078521903 | auc: 0.9999750244402373 | acc_detailed: [99.7959,99.8238,99.3217,99.604 ,99.389 ,99.1031,99.2693,99.4163,99.4867,
+ 98.6125] | map: 98.97337296767017 | model_name: model(1) | 
+##########################################
+elapsed time: 582.1136655807495
+
+##########################################

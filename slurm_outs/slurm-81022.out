@@ -1,0 +1,200 @@
+###################################################################
+args: 
+adam_amsgrad :  False
+adaptive_batch_size :  250
+apply_data_independent_bound :  False
+architectures :  ['MnistNetPate']
+attacker_dataset :  None
+batch_size :  64
+begin_id :  0
+budget :  10.0
+budgets :  [10.0]
+class_type :  multiclass
+commands :  ['train_private_models']
+cwd :  /h/321/scwyllie/model-extraction-iclr
+data_dir :  /h/321/scwyllie/model-extraction-iclr/data
+dataset :  mnist
+dataset_type :  balanced
+debug :  True
+device_ids :  [0]
+end_id :  1
+eval_batch_size :  1000
+label_reweight :  disable
+log_every_epoch :  0
+loss_type :  CE
+lr :  0.1
+lr_epochs :  [2]
+lr_factor :  0.1
+lr_mixmatch :  0.002
+mode :  random
+model_size :  small
+momentum :  0.5
+num_epochs :  50
+num_models :  5
+num_optimization_loop :  0
+num_querying_parties :  1
+num_workers :  0
+optimizer :  SGD
+path :  /h/321/scwyllie/model-extraction-iclr
+patience :  None
+poisson_mechanism :  False
+query_set_type :  numpy
+querying_party_ids :  [0, 1, 2]
+retrain_extracted_model :  False
+schedule_factor :  0.1
+schedule_patience :  10
+scheduler_milestones :  None
+scheduler_type :  ReduceLROnPlateau
+seed :  111
+show_dp_budget :  apply
+shuffle_dataset :  False
+sigma_gnmax :  10.0
+sigma_gnmax_private_knn :  28
+sigma_threshold :  0
+sigmoid_op :  apply
+target_model :  pate
+test_models_type :  private
+threshold :  0
+timestamp :  2023-04-14-16-21-44-162654
+transfer_type :  
+useserver :  False
+verbose :  True
+weight_decay :  0.0001
+ARGS FINISHED
+######################################################
+architecture:  MnistNetPate
+num_models:  5
+args.private_model_path:  /h/321/scwyllie/model-extraction-iclr/private-models/mnist/MnistNetPate/5-models
+args.retrained_private_models_path:  /h/321/scwyllie/model-extraction-iclr/retrained-private-models/mnist/MnistNetPate/5-models/random
+got here
+Training private models
+is cuda: True
+device count 2
+current 0
+name NVIDIA GeForce RTX 2080 Ti
+##########################################
+Training private models on 'mnist' dataset!
+Training private models on 'MnistNetPate' architecture!
+Number of private models: 5
+Initial learning rate: 0.1.
+Number of epochs for training each model: 50
+eval dataset:  <torch.utils.data.dataset.Subset object at 0x7ff2aef629d0>
+Label counts for eval set: [ 980, 1135, 1032, 1010,  982,  892,  958, 1028,  974, 1009].
+Class ratios for eval set: [ 9.8 , 11.35, 10.32, 10.1 ,  9.82,  8.92,  9.58, 10.28,  9.74, 10.09].
+Number of eval samples: 10000.
+##########################################
+train dataset for model id: 0 <torch.utils.data.dataset.Subset object at 0x7ff2aefc7bb0>
+Label counts for private train set: [1206, 1351, 1176, 1228, 1184, 1048, 1208, 1279, 1127, 1193].
+Class ratios for private train set: [10.05, 11.26,  9.8 , 10.23,  9.87,  8.73, 10.07, 10.66,  9.39,  9.94].
+Number of private train samples: 12000.
+Steps per epoch: 188
+Using GPU
+Device ids: [0]
+STARTED TRAINING
+Using GPU
+EPOCH:  0
+Using GPU
+EPOCH:  1
+Using GPU
+EPOCH:  2
+Using GPU
+EPOCH:  3
+Using GPU
+EPOCH:  4
+Using GPU
+EPOCH:  5
+Using GPU
+EPOCH:  6
+Using GPU
+EPOCH:  7
+Using GPU
+EPOCH:  8
+Using GPU
+EPOCH:  9
+Using GPU
+EPOCH:  10
+Using GPU
+EPOCH:  11
+Using GPU
+EPOCH:  12
+Using GPU
+EPOCH:  13
+Using GPU
+EPOCH:  14
+Using GPU
+EPOCH:  15
+Using GPU
+EPOCH:  16
+Using GPU
+EPOCH:  17
+Using GPU
+EPOCH:  18
+Using GPU
+EPOCH:  19
+Using GPU
+EPOCH:  20
+Using GPU
+EPOCH:  21
+Using GPU
+EPOCH:  22
+Using GPU
+EPOCH:  23
+Using GPU
+EPOCH:  24
+Using GPU
+EPOCH:  25
+Using GPU
+EPOCH:  26
+Using GPU
+EPOCH:  27
+Using GPU
+EPOCH:  28
+Using GPU
+EPOCH:  29
+Using GPU
+EPOCH:  30
+Using GPU
+EPOCH:  31
+Using GPU
+EPOCH:  32
+Using GPU
+EPOCH:  33
+Using GPU
+EPOCH:  34
+Using GPU
+EPOCH:  35
+Using GPU
+EPOCH:  36
+Using GPU
+EPOCH:  37
+Using GPU
+EPOCH:  38
+Using GPU
+EPOCH:  39
+Using GPU
+EPOCH:  40
+Using GPU
+EPOCH:  41
+Using GPU
+EPOCH:  42
+Using GPU
+EPOCH:  43
+Using GPU
+EPOCH:  44
+Using GPU
+EPOCH:  45
+Using GPU
+EPOCH:  46
+Using GPU
+EPOCH:  47
+Using GPU
+EPOCH:  48
+Using GPU
+EPOCH:  49
+Using GPU
+loss: 0.04998600846059968 | acc: 98.66 | acc2: 0 | balanced_acc: 0.986470918808144 | auc: 0.999902410771694 | acc_detailed: [98.9796,99.6476,98.6434,99.2079,98.4725,98.5426,98.3299,97.9572,98.8706,
+ 97.8196] | map: 97.68326921553886 | model_name: model(1) | 
+##########################################
+elapsed time: 324.7851257324219
+
+##########################################

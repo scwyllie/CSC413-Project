@@ -1,0 +1,13 @@
+#!/bin/bash
+#SBATCH --account nic
+#SBATCH --partition nic
+#SBATCH --qos nic
+#SBATCH --gres=gpu:2
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=20GB
+#SBATCH --output=./slurm_outs/slurm-%j.out
+#SBACTH --err=slurm-%j.err
+source activate 413Stuff
+./scripts/knockoffcifar10.sh
+conda deactivate
+

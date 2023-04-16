@@ -1,0 +1,47 @@
+Training adaptive model on 'cifar10' dataset!
+Training adaptive model on 'ResNet34' architecture!
+Number of private models: 1
+Initial learning rate: 0.1.
+Number of epochs for training each model: 100
+Label counts for eval set: [107,  96, 100,  87,  91, 102,  91, 109, 104, 113].
+Class ratios for eval set: [10.7,  9.6, 10. ,  8.7,  9.1, 10.2,  9.1, 10.9, 10.4, 11.3].
+Number of eval samples: 1000.
+accuracy of victim: 95.6.
+Steps per epoch: 16.
+loss: 4.660311162471771 | acc: 36.0 | acc2: 0 | balanced_acc: 0.3556526313024543 | auc: 0.7817195489877997 | acc_detailed: [48.5981,40.625 ,21.    ,20.6897,26.3736,21.5686,47.2527,39.4495,42.3077,
+ 47.7876] | map: 24.32580466928091 | 
+best hyperparameters : lr 0.1, batch size 64
+Steps per epoch: 32.
+loss: 4.254057422280312 | acc: 39.5 | acc2: 0 | balanced_acc: 0.3900111494497418 | auc: 0.806798057529353 | acc_detailed: [45.7944,40.625 ,33.    ,22.9885,23.0769,34.3137,47.2527,46.789 ,51.9231,
+ 44.2478] | map: 25.879639596950554 | 
+best hyperparameters : lr 0.1, batch size 64
+Steps per epoch: 47.
+loss: 4.446515679359436 | acc: 42.0 | acc2: 0 | balanced_acc: 0.4178523481405584 | auc: 0.8239142647177281 | acc_detailed: [57.0093,51.0417,24.    ,27.5862,36.2637,31.3725,53.8462,45.8716,51.9231,
+ 38.9381] | map: 27.963045838136193 | 
+best hyperparameters : lr 0.1, batch size 64
+Steps per epoch: 63.
+loss: 3.4856586903333664 | acc: 48.8 | acc2: 0 | balanced_acc: 0.485424970255193 | auc: 0.862869666041602 | acc_detailed: [53.271 ,46.875 ,39.    ,28.7356,47.2527,40.1961,64.8352,48.6239,64.4231,
+ 52.2124] | map: 34.64643286264234 | 
+best hyperparameters : lr 0.1, batch size 64
+Steps per epoch: 79.
+loss: 3.1515745520591736 | acc: 53.6 | acc2: 0 | balanced_acc: 0.5323527798621216 | auc: 0.8912266911816867 | acc_detailed: [66.3551,59.375 ,47.    ,36.7816,48.3516,36.2745,58.2418,57.7982,67.3077,
+ 54.8673] | map: 38.63832759668659 | 
+best hyperparameters : lr 0.1, batch size 64
+Steps per epoch: 94.
+loss: 2.7322236448526382 | acc: 55.9 | acc2: 0 | balanced_acc: 0.5541902235259939 | auc: 0.890782303033058 | acc_detailed: [61.6822,62.5   ,44.    ,36.7816,49.4505,42.1569,60.4396,62.3853,70.1923,
+ 64.6018] | map: 41.31783352242895 | 
+best hyperparameters : lr 0.1, batch size 64
+Steps per epoch: 110.
+loss: 2.857602931559086 | acc: 56.4 | acc2: 0 | balanced_acc: 0.5574414924518436 | auc: 0.9012699294734532 | acc_detailed: [69.1589,67.7083,40.    ,32.1839,47.2527,40.1961,57.1429,67.8899,73.0769,
+ 62.8319] | map: 41.94490104935703 | 
+best hyperparameters : lr 0.1, batch size 64
+Steps per epoch: 125.
+loss: 2.816803626716137 | acc: 57.0 | acc2: 0 | balanced_acc: 0.5665284602869142 | auc: 0.8995613291915794 | acc_detailed: [63.5514,65.625 ,49.    ,39.0805,48.3516,41.1765,67.033 ,63.3028,69.2308,
+ 60.177 ] | map: 42.16885450266627 | 
+best hyperparameters : lr 0.1, batch size 64
+Steps per epoch: 141.
+loss: 2.396375559270382 | acc: 60.7 | acc2: 0 | balanced_acc: 0.6039412586468117 | auc: 0.9162466971017995 | acc_detailed: [69.1589,69.7917,39.    ,50.5747,54.9451,48.0392,65.9341,66.9725,74.0385,
+ 65.4867] | map: 45.35012310447043 | 
+best hyperparameters : lr 0.1, batch size 64
+elapsed time: 4272.7672481536865
+

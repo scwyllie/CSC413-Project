@@ -1,0 +1,74 @@
+###################################################################
+args: 
+adam_amsgrad :  False
+adaptive_batch_size :  1000
+apply_data_independent_bound :  False
+architectures :  ['MnistNetPate']
+attacker_dataset :  imagenet
+batch_size :  64
+begin_id :  0
+budget :  10.0
+budgets :  [10.0]
+class_type :  multiclass
+commands :  ['train_private_models', 'basic_model_stealing_attack']
+cwd :  /h/321/scwyllie/model-extraction-iclr
+data_dir :  /h/321/scwyllie/data
+dataset :  mnist
+dataset_type :  balanced
+debug :  False
+device_ids :  [0, 1]
+end_id :  1
+eval_batch_size :  1000
+label_reweight :  disable
+log_every_epoch :  0
+loss_type :  CE
+lr :  0.1
+lr_epochs :  [2]
+lr_factor :  0.1
+lr_mixmatch :  0.002
+mode :  knockoff
+model_size :  small
+momentum :  0.5
+num_epochs :  50
+num_models :  1
+num_optimization_loop :  0
+num_querying_parties :  1
+num_workers :  0
+optimizer :  SGD
+path :  /h/321/scwyllie/model-extraction-iclr
+patience :  None
+poisson_mechanism :  False
+query_set_type :  numpy
+querying_party_ids :  [0, 1, 2]
+retrain_extracted_model :  False
+schedule_factor :  0.1
+schedule_patience :  10
+scheduler_milestones :  None
+scheduler_type :  ReduceLROnPlateau
+seed :  111
+show_dp_budget :  apply
+shuffle_dataset :  False
+sigma_gnmax :  2.0
+sigma_gnmax_private_knn :  28
+sigma_threshold :  0.0
+sigmoid_op :  apply
+target_model :  victim
+test_models_type :  private
+threshold :  0.0
+timestamp :  2023-04-13-20-16-10-697256
+transfer_type :  
+useserver :  False
+verbose :  True
+weight_decay :  0.0001
+ARGS FINISHED
+######################################################
+architecture:  MnistNetPate
+num_models:  1
+args.private_model_path:  /h/321/scwyllie/model-extraction-iclr/private-models/mnist/MnistNetPate/1-models
+args.retrained_private_models_path:  /h/321/scwyllie/model-extraction-iclr/retrained-private-models/mnist/MnistNetPate/1-models/knockoff
+Traceback (most recent call last):
+  File "/h/321/scwyllie/model-extraction-iclr/main.py", line 354, in <module>
+    main(args)
+  File "/h/321/scwyllie/model-extraction-iclr/main.py", line 332, in main
+    raise Exception(
+Exception: The private_model_path: /h/321/scwyllie/model-extraction-iclr/private-models/mnist/MnistNetPate/1-models already exists.

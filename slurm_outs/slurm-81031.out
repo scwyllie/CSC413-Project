@@ -1,0 +1,334 @@
+###################################################################
+args: 
+adam_amsgrad :  False
+adaptive_batch_size :  1000
+apply_data_independent_bound :  False
+architectures :  ['ResNet34']
+attacker_dataset :  cifar100
+batch_size :  64
+begin_id :  0
+budget :  10.0
+budgets :  [10.0]
+class_type :  multiclass
+commands :  ['train_private_models', 'basic_model_stealing_attack']
+cwd :  /h/321/scwyllie/model-extraction-iclr
+data_dir :  /h/321/scwyllie/data
+dataset :  cifar10
+dataset_type :  balanced
+debug :  False
+device_ids :  [0, 1]
+end_id :  1
+eval_batch_size :  1000
+label_reweight :  disable
+log_every_epoch :  0
+loss_type :  CE
+lr :  0.1
+lr_epochs :  [2]
+lr_factor :  0.1
+lr_mixmatch :  0.002
+mode :  knockoff
+model_size :  small
+momentum :  0.5
+num_epochs :  100
+num_models :  1
+num_optimization_loop :  0
+num_querying_parties :  1
+num_workers :  0
+optimizer :  SGD
+path :  /h/321/scwyllie/model-extraction-iclr
+patience :  None
+poisson_mechanism :  False
+query_set_type :  numpy
+querying_party_ids :  [0, 1, 2]
+retrain_extracted_model :  False
+schedule_factor :  0.1
+schedule_patience :  10
+scheduler_milestones :  None
+scheduler_type :  ReduceLROnPlateau
+seed :  111
+show_dp_budget :  apply
+shuffle_dataset :  False
+sigma_gnmax :  2.0
+sigma_gnmax_private_knn :  28
+sigma_threshold :  0.0
+sigmoid_op :  apply
+target_model :  victim
+test_models_type :  private
+threshold :  0.0
+timestamp :  2023-04-14-23-25-45-191823
+transfer_type :  
+useserver :  False
+verbose :  True
+weight_decay :  0.0001
+ARGS FINISHED
+######################################################
+architecture:  ResNet34
+num_models:  1
+args.private_model_path:  /h/321/scwyllie/model-extraction-iclr/private-models/cifar10/ResNet34/1-models
+args.retrained_private_models_path:  /h/321/scwyllie/model-extraction-iclr/retrained-private-models/cifar10/ResNet34/1-models/knockoff
+got here
+Training private models
+is cuda: True
+device count 2
+current 0
+name NVIDIA GeForce RTX 2080 Ti
+##########################################
+Training private models on 'cifar10' dataset!
+Training private models on 'ResNet34' architecture!
+Number of private models: 1
+Initial learning rate: 0.1.
+Number of epochs for training each model: 100
+Files already downloaded and verified
+Files already downloaded and verified
+eval dataset:  <torch.utils.data.dataset.Subset object at 0x7fa039ce5f40>
+##########################################
+train dataset for model id: 0 <torch.utils.data.dataset.Subset object at 0x7fa039ce5ca0>
+Steps per epoch: 782
+Using GPU
+Device ids: [0, 1]
+STARTED TRAINING
+Using GPU
+EPOCH:  0
+Using GPU
+EPOCH:  1
+Using GPU
+EPOCH:  2
+Using GPU
+EPOCH:  3
+Using GPU
+EPOCH:  4
+Using GPU
+EPOCH:  5
+Using GPU
+EPOCH:  6
+Using GPU
+EPOCH:  7
+Using GPU
+EPOCH:  8
+Using GPU
+EPOCH:  9
+Using GPU
+EPOCH:  10
+Using GPU
+EPOCH:  11
+Using GPU
+EPOCH:  12
+Using GPU
+EPOCH:  13
+Using GPU
+EPOCH:  14
+Using GPU
+EPOCH:  15
+Using GPU
+EPOCH:  16
+Using GPU
+EPOCH:  17
+Using GPU
+EPOCH:  18
+Using GPU
+EPOCH:  19
+Using GPU
+EPOCH:  20
+Using GPU
+EPOCH:  21
+Using GPU
+EPOCH:  22
+Using GPU
+EPOCH:  23
+Using GPU
+EPOCH:  24
+Using GPU
+EPOCH:  25
+Using GPU
+EPOCH:  26
+Using GPU
+EPOCH:  27
+Using GPU
+EPOCH:  28
+Using GPU
+EPOCH:  29
+Using GPU
+EPOCH:  30
+Using GPU
+EPOCH:  31
+Using GPU
+EPOCH:  32
+Using GPU
+EPOCH:  33
+Using GPU
+EPOCH:  34
+Using GPU
+EPOCH:  35
+Using GPU
+EPOCH:  36
+Using GPU
+EPOCH:  37
+Using GPU
+EPOCH:  38
+Using GPU
+EPOCH:  39
+Using GPU
+EPOCH:  40
+Using GPU
+EPOCH:  41
+Using GPU
+EPOCH:  42
+Using GPU
+EPOCH:  43
+Using GPU
+EPOCH:  44
+Using GPU
+EPOCH:  45
+Using GPU
+EPOCH:  46
+Using GPU
+EPOCH:  47
+Using GPU
+EPOCH:  48
+Using GPU
+EPOCH:  49
+Using GPU
+EPOCH:  50
+Using GPU
+EPOCH:  51
+Using GPU
+EPOCH:  52
+Using GPU
+EPOCH:  53
+Using GPU
+EPOCH:  54
+Using GPU
+EPOCH:  55
+Using GPU
+EPOCH:  56
+Using GPU
+EPOCH:  57
+Using GPU
+EPOCH:  58
+Using GPU
+EPOCH:  59
+Using GPU
+EPOCH:  60
+Using GPU
+EPOCH:  61
+Using GPU
+EPOCH:  62
+Using GPU
+EPOCH:  63
+Using GPU
+EPOCH:  64
+Using GPU
+EPOCH:  65
+Using GPU
+EPOCH:  66
+Using GPU
+EPOCH:  67
+Using GPU
+EPOCH:  68
+Using GPU
+EPOCH:  69
+Using GPU
+EPOCH:  70
+Using GPU
+EPOCH:  71
+Using GPU
+EPOCH:  72
+Using GPU
+EPOCH:  73
+Using GPU
+EPOCH:  74
+Using GPU
+EPOCH:  75
+Using GPU
+EPOCH:  76
+Using GPU
+EPOCH:  77
+Using GPU
+EPOCH:  78
+Using GPU
+EPOCH:  79
+Using GPU
+EPOCH:  80
+Using GPU
+EPOCH:  81
+Using GPU
+EPOCH:  82
+Using GPU
+EPOCH:  83
+Using GPU
+EPOCH:  84
+Using GPU
+EPOCH:  85
+Using GPU
+EPOCH:  86
+Using GPU
+EPOCH:  87
+Using GPU
+EPOCH:  88
+Using GPU
+EPOCH:  89
+Using GPU
+EPOCH:  90
+Using GPU
+EPOCH:  91
+Using GPU
+EPOCH:  92
+Using GPU
+EPOCH:  93
+Using GPU
+EPOCH:  94
+Using GPU
+EPOCH:  95
+Using GPU
+EPOCH:  96
+Using GPU
+EPOCH:  97
+Using GPU
+EPOCH:  98
+Using GPU
+EPOCH:  99
+Using GPU
+loss: 0.31828573625534773 | acc: 91.6 | acc2: 0 | balanced_acc: 0.9130641575880769 | auc: 0.9954669861976214 | acc_detailed: [90.6542,95.8333,90.    ,73.5632,91.2088,92.1569,94.5055,95.4128,93.2692,
+ 96.4602] | map: 86.00472244197044 | model_name: model(1) | 
+##########################################
+elapsed time: 4644.235635519028
+
+##########################################
+queries,accuracy,type,privacy
+queries,accuracy,type,privacy
+0,10,0,0
+0,10,0,0
+queries,type,entropy
+0,0,0
+queries,type,gap
+0,0,0
+queries,type,pknn
+0,0,0
+Files already downloaded and verified
+args.victim_model_path:  /h/321/scwyllie/model-extraction-iclr/private-models/cifar10/ResNet34/1-models
+Training adaptive model on 'cifar10' dataset!
+Training adaptive model on 'ResNet34' architecture!
+Number of private models: 1
+Initial learning rate: 0.1.
+Number of epochs for training each model: 100
+eval dataset:  <torch.utils.data.dataset.Subset object at 0x7fa039cccac0>
+Label counts for eval set: [107,  96, 100,  87,  91, 102,  91, 109, 104, 113].
+Class ratios for eval set: [10.7,  9.6, 10. ,  8.7,  9.1, 10.2,  9.1, 10.9, 10.4, 11.3].
+Number of eval samples: 1000.
+Loaded stolen model
+Traceback (most recent call last):
+  File "/h/321/scwyllie/model-extraction-iclr/main.py", line 354, in <module>
+    main(args)
+  File "/h/321/scwyllie/model-extraction-iclr/main.py", line 344, in main
+    run_model_extraction(args=args)
+  File "/h/321/scwyllie/model-extraction-iclr/model_extraction/main_model_extraction.py", line 436, in run_model_extraction
+    stolen_model = get_private_model_by_id(args=args, id=0)
+  File "/h/321/scwyllie/model-extraction-iclr/model_extraction/main_model_extraction.py", line 275, in get_victim_model_and_estimator
+    def get_victim_model_and_estimator(args):
+  File "/h/321/scwyllie/.conda/envs/413Stuff/lib/python3.9/site-packages/torch/serialization.py", line 791, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/h/321/scwyllie/.conda/envs/413Stuff/lib/python3.9/site-packages/torch/serialization.py", line 271, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/h/321/scwyllie/.conda/envs/413Stuff/lib/python3.9/site-packages/torch/serialization.py", line 252, in __init__
+    super().__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '../private-models/cifar10/ResNet34/cifar10-resnet34_8x.pt'

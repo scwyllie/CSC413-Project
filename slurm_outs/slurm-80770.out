@@ -1,0 +1,339 @@
+###################################################################
+args: 
+adam_amsgrad :  False
+adaptive_batch_size :  1000
+apply_data_independent_bound :  False
+architectures :  ['MnistNetPate']
+attacker_dataset :  imagenet
+batch_size :  64
+begin_id :  0
+budget :  10.0
+budgets :  [10.0]
+class_type :  multiclass
+commands :  ['train_private_models', 'basic_model_stealing_attack']
+cwd :  /h/321/scwyllie/model-extraction-iclr
+data_dir :  /h/321/scwyllie/data
+dataset :  mnist
+dataset_type :  balanced
+debug :  False
+device_ids :  [0, 1]
+end_id :  1
+eval_batch_size :  1000
+label_reweight :  disable
+log_every_epoch :  0
+loss_type :  CE
+lr :  0.1
+lr_epochs :  [2]
+lr_factor :  0.1
+lr_mixmatch :  0.002
+mode :  knockoff
+model_size :  small
+momentum :  0.5
+num_epochs :  50
+num_models :  1
+num_optimization_loop :  0
+num_querying_parties :  1
+num_workers :  0
+optimizer :  SGD
+path :  /h/321/scwyllie/model-extraction-iclr
+patience :  None
+poisson_mechanism :  False
+query_set_type :  numpy
+querying_party_ids :  [0, 1, 2]
+retrain_extracted_model :  False
+schedule_factor :  0.1
+schedule_patience :  10
+scheduler_milestones :  None
+scheduler_type :  ReduceLROnPlateau
+seed :  111
+show_dp_budget :  apply
+shuffle_dataset :  False
+sigma_gnmax :  2.0
+sigma_gnmax_private_knn :  28
+sigma_threshold :  0.0
+sigmoid_op :  apply
+target_model :  victim
+test_models_type :  private
+threshold :  0.0
+timestamp :  2023-04-13-20-16-59-620971
+transfer_type :  
+useserver :  False
+verbose :  True
+weight_decay :  0.0001
+ARGS FINISHED
+######################################################
+architecture:  MnistNetPate
+num_models:  1
+args.private_model_path:  /h/321/scwyllie/model-extraction-iclr/private-models/mnist/MnistNetPate/1-models
+args.retrained_private_models_path:  /h/321/scwyllie/model-extraction-iclr/retrained-private-models/mnist/MnistNetPate/1-models/knockoff
+got here
+Training private models
+is cuda: True
+device count 2
+current 0
+name NVIDIA GeForce RTX 2080 Ti
+##########################################
+Training private models on 'mnist' dataset!
+Training private models on 'MnistNetPate' architecture!
+Number of private models: 1
+Initial learning rate: 0.1.
+Number of epochs for training each model: 50
+eval dataset:  <torch.utils.data.dataset.Subset object at 0x7fa27c870eb0>
+##########################################
+train dataset for model id: 0 <torch.utils.data.dataset.Subset object at 0x7fa27c870ac0>
+Steps per epoch: 938
+STARTED TRAINING
+EPOCH:  0
+EPOCH:  1
+EPOCH:  2
+EPOCH:  3
+EPOCH:  4
+EPOCH:  5
+EPOCH:  6
+EPOCH:  7
+EPOCH:  8
+EPOCH:  9
+EPOCH:  10
+EPOCH:  11
+EPOCH:  12
+EPOCH:  13
+EPOCH:  14
+EPOCH:  15
+EPOCH:  16
+EPOCH:  17
+EPOCH:  18
+EPOCH:  19
+EPOCH:  20
+EPOCH:  21
+EPOCH:  22
+EPOCH:  23
+EPOCH:  24
+EPOCH:  25
+EPOCH:  26
+EPOCH:  27
+EPOCH:  28
+EPOCH:  29
+EPOCH:  30
+EPOCH:  31
+EPOCH:  32
+EPOCH:  33
+EPOCH:  34
+EPOCH:  35
+EPOCH:  36
+EPOCH:  37
+EPOCH:  38
+EPOCH:  39
+EPOCH:  40
+EPOCH:  41
+EPOCH:  42
+EPOCH:  43
+EPOCH:  44
+EPOCH:  45
+EPOCH:  46
+EPOCH:  47
+EPOCH:  48
+EPOCH:  49
+loss: 0.022019824577399875 | acc: 99.39 | acc2: 0 | balanced_acc: 0.9937885783364262 | auc: 0.9999724645522386 | acc_detailed: [ 99.6939,100.    , 99.3217, 99.604 , 99.1853, 99.1031, 99.1649, 99.1245,
+  99.384 , 99.2071] | map: 98.98268877973408 | model_name: model(1) | 
+##########################################
+elapsed time: 1186.952806711197
+
+##########################################
+queries,accuracy,type,privacy
+queries,accuracy,type,privacy
+0,10,0,0
+0,10,0,0
+queries,type,entropy
+0,0,0
+queries,type,gap
+0,0,0
+queries,type,pknn
+0,0,0
+/h/321/scwyllie/.conda/envs/413Stuff/lib/python3.9/site-packages/torchvision/transforms/functional.py:1603: UserWarning: The default value of the antialias parameter of all the resizing transforms (Resize(), RandomResizedCrop(), etc.) will change from None to True in v0.17, in order to be consistent across the PIL and Tensor backends. To suppress this warning, directly pass antialias=True (recommended, future default), antialias=None (current default, which means False for Tensors and True for PIL), or antialias=False (only works on Tensors - PIL will still use antialiasing). This also applies if you are using the inference transforms from the models weights: update the call to weights.transforms(antialias=True).
+  warnings.warn(
+args.victim_model_path:  /h/321/scwyllie/model-extraction-iclr/private-models/mnist/MnistNetPate/1-models
+Training adaptive model on 'mnist' dataset!
+Training adaptive model on 'MnistNetPate' architecture!
+Number of private models: 1
+Initial learning rate: 0.1.
+Number of epochs for training each model: 50
+eval dataset:  <torch.utils.data.dataset.Subset object at 0x7fa27c80d730>
+Label counts for eval set: [ 980, 1135, 1032, 1010,  982,  892,  958, 1028,  974, 1009].
+Class ratios for eval set: [ 9.8 , 11.35, 10.32, 10.1 ,  9.82,  8.92,  9.58, 10.28,  9.74, 10.09].
+Number of eval samples: 10000.
+Loaded stolen model
+Building ensemble model 'ensemble(all)'!
+accuracy of victim: 99.39.
+attacker uses imagenet dataset.
+There are 50000 unlabeled points in total.
+First iteration, no retraining
+entropy cost
+1000,knockoff,503.6784362792969
+gap cost
+1000,knockoff,499.486328125
+1000,knockoff,10.0367650327127
+/h/321/scwyllie/.conda/envs/413Stuff/lib/python3.9/site-packages/torch/utils/data/dataloader.py:561: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/h/321/scwyllie/.conda/envs/413Stuff/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:152: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+1000,80.46,knockoff,0
+1000,80.49,knockoff,0
+time for querying 13.202771425247192
+time for training 666.4591526985168
+1000,knockoff,13.202771425247192,666.4591526985168
+entropy cost
+2000,knockoff,1011.3198852539062
+gap cost
+2000,knockoff,1003.019287109375
+2000,knockoff,16.25705602671303
+2000,93.33,knockoff,0
+2000,93.63,knockoff,0
+time for querying 13.477574586868286
+time for training 1027.8402287960052
+2000,knockoff,13.477574586868286,1027.8402287960052
+entropy cost
+3000,knockoff,1519.3721618652344
+gap cost
+3000,knockoff,1502.5778198242188
+3000,knockoff,21.357814374432632
+3000,95.55,knockoff,0
+3000,95.84,knockoff,0
+time for querying 13.290916681289673
+time for training 1337.3668110370636
+3000,knockoff,13.290916681289673,1337.3668110370636
+entropy cost
+4000,knockoff,2013.3871459960938
+gap cost
+4000,knockoff,1991.2427368164062
+4000,knockoff,25.929779519878544
+4000,96.85,knockoff,0
+4000,97.13,knockoff,0
+time for querying 13.670074462890625
+time for training 1678.5186696052551
+4000,knockoff,13.670074462890625,1678.5186696052551
+entropy cost
+5000,knockoff,2509.1409606933594
+gap cost
+5000,knockoff,2483.5147399902344
+5000,knockoff,31.484114836361986
+5000,97.31,knockoff,0
+5000,97.59,knockoff,0
+time for querying 13.27218508720398
+time for training 1998.0090675354004
+5000,knockoff,13.27218508720398,1998.0090675354004
+entropy cost
+6000,knockoff,3011.2511596679688
+gap cost
+6000,knockoff,2980.1568298339844
+6000,knockoff,36.27444164575023
+6000,97.64,knockoff,0
+6000,97.86,knockoff,0
+time for querying 13.032140731811523
+time for training 2343.774393558502
+6000,knockoff,13.032140731811523,2343.774393558502
+entropy cost
+7000,knockoff,3516.6389770507812
+gap cost
+7000,knockoff,3476.6615295410156
+7000,knockoff,40.22735004231877
+7000,97.77,knockoff,0
+7000,98.03,knockoff,0
+time for querying 13.24770474433899
+time for training 2661.46626162529
+7000,knockoff,13.24770474433899,2661.46626162529
+entropy cost
+8000,knockoff,4022.353973388672
+gap cost
+8000,knockoff,3979.4190368652344
+8000,knockoff,44.2866369171296
+8000,97.95,knockoff,0
+8000,98.24,knockoff,0
+time for querying 13.410475254058838
+time for training 3004.3354094028473
+8000,knockoff,13.410475254058838,3004.3354094028473
+entropy cost
+9000,knockoff,4538.077789306641
+gap cost
+9000,knockoff,4494.699981689453
+9000,knockoff,47.70856989880109
+9000,98.17,knockoff,0
+9000,98.42,knockoff,0
+time for querying 13.210674285888672
+time for training 3354.409576177597
+9000,knockoff,13.210674285888672,3354.409576177597
+entropy cost
+10000,knockoff,5041.9013671875
+gap cost
+10000,knockoff,4986.074798583984
+10000,knockoff,51.34671382383632
+10000,98.36,knockoff,0
+10000,98.63,knockoff,0
+time for querying 13.229547262191772
+time for training 3679.4662454128265
+10000,knockoff,13.229547262191772,3679.4662454128265
+entropy cost
+11000,knockoff,5553.6143798828125
+gap cost
+11000,knockoff,5493.0760498046875
+11000,knockoff,55.59794917941131
+11000,98.41,knockoff,0
+11000,98.65,knockoff,0
+time for querying 13.450563669204712
+time for training 4025.4215772151947
+11000,knockoff,13.450563669204712,4025.4215772151947
+entropy cost
+12000,knockoff,6063.481689453125
+gap cost
+12000,knockoff,5995.278289794922
+12000,knockoff,59.693455821823505
+12000,98.48,knockoff,0
+12000,98.76,knockoff,0
+time for querying 13.710301399230957
+time for training 4369.6353878974915
+12000,knockoff,13.710301399230957,4369.6353878974915
+entropy cost
+13000,knockoff,6567.955322265625
+gap cost
+13000,knockoff,6487.557525634766
+13000,knockoff,63.50841242486221
+13000,98.49,knockoff,0
+13000,98.8,knockoff,0
+time for querying 13.69760799407959
+time for training 4721.3925931453705
+13000,knockoff,13.69760799407959,4721.3925931453705
+entropy cost
+14000,knockoff,7078.226776123047
+gap cost
+14000,knockoff,6992.746307373047
+14000,knockoff,67.46990357620577
+14000,98.51,knockoff,0
+14000,98.82,knockoff,0
+time for querying 13.68803358078003
+time for training 5062.251206874847
+14000,knockoff,13.68803358078003,5062.251206874847
+entropy cost
+15000,knockoff,7573.923919677734
+gap cost
+15000,knockoff,7481.172302246094
+15000,knockoff,71.53930940050857
+15000,98.57,knockoff,0
+15000,98.91,knockoff,0
+time for querying 13.289756298065186
+time for training 5431.997747421265
+15000,knockoff,13.289756298065186,5431.997747421265
+entropy cost
+16000,knockoff,8071.167449951172
+gap cost
+16000,knockoff,7968.64453125
+16000,knockoff,75.53642166196765
+16000,98.57,knockoff,0
+16000,98.94,knockoff,0
+time for querying 13.470624685287476
+time for training 5785.785514354706
+16000,knockoff,13.470624685287476,5785.785514354706
+entropy cost
+17000,knockoff,8566.242218017578
+gap cost
+17000,knockoff,8458.694030761719
+17000,knockoff,79.42883342796152
+slurmstepd: error: *** JOB 80770 ON nic2 CANCELLED AT 2023-04-14T12:00:12 ***

@@ -1,0 +1,603 @@
+###################################################################
+args: 
+adam_amsgrad :  False
+adaptive_batch_size :  1000
+apply_data_independent_bound :  False
+architectures :  ['ResNet34']
+attacker_dataset :  cifar100
+batch_size :  64
+begin_id :  0
+budget :  10.0
+budgets :  [10.0]
+class_type :  multiclass
+commands :  ['basic_model_stealing_attack']
+cwd :  /h/321/scwyllie/model-extraction-iclr
+data_dir :  /h/321/scwyllie/data
+dataset :  cifar10
+dataset_type :  balanced
+debug :  False
+device_ids :  [0, 1]
+end_id :  1
+eval_batch_size :  1000
+label_reweight :  disable
+log_every_epoch :  0
+loss_type :  CE
+lr :  0.1
+lr_epochs :  [2]
+lr_factor :  0.1
+lr_mixmatch :  0.002
+mode :  knockoff
+model_size :  small
+momentum :  0.5
+num_epochs :  100
+num_models :  1
+num_optimization_loop :  0
+num_querying_parties :  1
+num_workers :  0
+optimizer :  SGD
+path :  /h/321/scwyllie/model-extraction-iclr
+patience :  None
+poisson_mechanism :  False
+query_set_type :  numpy
+querying_party_ids :  [0, 1, 2]
+retrain_extracted_model :  False
+schedule_factor :  0.1
+schedule_patience :  10
+scheduler_milestones :  None
+scheduler_type :  ReduceLROnPlateau
+seed :  111
+show_dp_budget :  apply
+shuffle_dataset :  False
+sigma_gnmax :  2.0
+sigma_gnmax_private_knn :  28
+sigma_threshold :  0.0
+sigmoid_op :  apply
+target_model :  victim
+test_models_type :  private
+threshold :  0.0
+timestamp :  2023-04-15-01-04-27-118075
+transfer_type :  
+useserver :  False
+verbose :  True
+weight_decay :  0.0001
+ARGS FINISHED
+######################################################
+architecture:  ResNet34
+num_models:  1
+args.private_model_path:  /h/321/scwyllie/model-extraction-iclr/private-models/cifar10/ResNet34/1-models
+args.retrained_private_models_path:  /h/321/scwyllie/model-extraction-iclr/retrained-private-models/cifar10/ResNet34/1-models/knockoff
+queries,accuracy,type,privacy
+queries,accuracy,type,privacy
+0,10,0,0
+0,10,0,0
+queries,type,entropy
+0,0,0
+queries,type,gap
+0,0,0
+queries,type,pknn
+0,0,0
+Files already downloaded and verified
+args.victim_model_path:  /h/321/scwyllie/model-extraction-iclr/private-models/cifar10/ResNet34/1-models
+Training adaptive model on 'cifar10' dataset!
+Training adaptive model on 'ResNet34' architecture!
+Number of private models: 1
+Initial learning rate: 0.1.
+Number of epochs for training each model: 100
+eval dataset:  <torch.utils.data.dataset.Subset object at 0x7f022dbcc8b0>
+Label counts for eval set: [107,  96, 100,  87,  91, 102,  91, 109, 104, 113].
+Class ratios for eval set: [10.7,  9.6, 10. ,  8.7,  9.1, 10.2,  9.1, 10.9, 10.4, 11.3].
+Number of eval samples: 1000.
+Loaded stolen model
+Building ensemble model 'ensemble(all)'!
+Loaded victim
+Using GPU
+accuracy of victim: 95.6.
+Files already downloaded and verified
+Downloading https://www.cs.toronto.edu/~kriz/cifar-100-python.tar.gz to /h/321/scwyllie/model-extraction-iclr/CIFAR100/cifar-100-python.tar.gz
+  0%|          | 0/169001437 [00:00<?, ?it/s]  7%|▋         | 11567104/169001437 [00:00<00:01, 115590678.06it/s] 14%|█▎        | 23134208/169001437 [00:00<00:01, 111538703.69it/s] 21%|██        | 34832384/169001437 [00:00<00:01, 113919073.76it/s] 27%|██▋       | 46235648/169001437 [00:00<00:01, 112824645.37it/s] 34%|███▍      | 57901056/169001437 [00:00<00:00, 114181006.50it/s] 41%|████      | 69337088/169001437 [00:00<00:00, 112761686.36it/s] 48%|████▊     | 81035264/169001437 [00:00<00:00, 114091643.87it/s] 55%|█████▍    | 92471296/169001437 [00:00<00:00, 112908374.97it/s] 62%|██████▏   | 104202240/169001437 [00:00<00:00, 114246461.82it/s] 68%|██████▊   | 115638272/169001437 [00:01<00:00, 113534969.54it/s] 75%|███████▌  | 127205376/169001437 [00:01<00:00, 114174861.26it/s] 82%|████████▏ | 138641408/169001437 [00:01<00:00, 112067536.11it/s] 89%|████████▊ | 149880832/169001437 [00:01<00:00, 111513932.12it/s] 95%|█████████▌| 161120256/169001437 [00:01<00:00, 111731675.10it/s]100%|██████████| 169001437/169001437 [00:01<00:00, 112892370.25it/s]
+Extracting /h/321/scwyllie/model-extraction-iclr/CIFAR100/cifar-100-python.tar.gz to /h/321/scwyllie/model-extraction-iclr/CIFAR100
+attacker uses cifar100 dataset.
+There are 50000 unlabeled points in total.
+First iteration, no retraining
+entropy cost
+1000,knockoff,191.35748291015625
+gap cost
+1000,knockoff,245.39178466796875
+1000,knockoff,7.411535805143714
+1000,26.3,knockoff,0
+1000,26.7,knockoff,0
+time for querying 0.507375955581665
+time for training 18.027026653289795
+1000,knockoff,0.507375955581665,18.027026653289795
+entropy cost
+2000,knockoff,375.60923767089844
+gap cost
+2000,knockoff,482.14910888671875
+2000,knockoff,12.57993215657945
+2000,24.9,knockoff,0
+2000,25.7,knockoff,0
+time for querying 0.48134803771972656
+time for training 18.379753351211548
+2000,knockoff,0.48134803771972656,18.379753351211548
+entropy cost
+3000,knockoff,557.2734680175781
+gap cost
+3000,knockoff,714.2055969238281
+3000,knockoff,18.023826662701822
+3000,35.6,knockoff,0
+3000,36.9,knockoff,0
+time for querying 0.4777350425720215
+time for training 24.513867616653442
+3000,knockoff,0.4777350425720215,24.513867616653442
+entropy cost
+4000,knockoff,753.4802856445312
+gap cost
+4000,knockoff,920.5204772949219
+4000,knockoff,23.62406622093785
+4000,39.9,knockoff,0
+4000,40.3,knockoff,0
+time for querying 0.481903076171875
+time for training 27.388295888900757
+4000,knockoff,0.481903076171875,27.388295888900757
+entropy cost
+5000,knockoff,934.8489685058594
+gap cost
+5000,knockoff,1152.2706604003906
+5000,knockoff,29.220630040200064
+5000,31.6,knockoff,0
+5000,32.0,knockoff,0
+time for querying 0.4804677963256836
+time for training 30.477446794509888
+5000,knockoff,0.4804677963256836,30.477446794509888
+entropy cost
+6000,knockoff,1123.2339782714844
+gap cost
+6000,knockoff,1393.8511047363281
+6000,knockoff,34.464067116291574
+6000,45.9,knockoff,0
+6000,46.8,knockoff,0
+time for querying 0.47864603996276855
+time for training 35.50309944152832
+6000,knockoff,0.47864603996276855,35.50309944152832
+entropy cost
+7000,knockoff,1312.4178924560547
+gap cost
+7000,knockoff,1619.3717956542969
+7000,knockoff,39.07059284203315
+7000,52.0,knockoff,0
+7000,52.0,knockoff,0
+time for querying 0.4806206226348877
+time for training 40.19579577445984
+7000,knockoff,0.4806206226348877,40.19579577445984
+entropy cost
+8000,knockoff,1498.7093658447266
+gap cost
+8000,knockoff,1858.9765167236328
+8000,knockoff,44.01942266360237
+8000,56.7,knockoff,0
+8000,57.4,knockoff,0
+time for querying 0.4760611057281494
+time for training 44.10559701919556
+8000,knockoff,0.4760611057281494,44.10559701919556
+entropy cost
+9000,knockoff,1686.2375183105469
+gap cost
+9000,knockoff,2090.1795806884766
+9000,knockoff,48.64167610756528
+9000,58.0,knockoff,0
+9000,58.2,knockoff,0
+time for querying 0.48302745819091797
+time for training 47.14537072181702
+9000,knockoff,0.48302745819091797,47.14537072181702
+entropy cost
+10000,knockoff,1873.7508850097656
+gap cost
+10000,knockoff,2325.0101165771484
+10000,knockoff,52.87923590095329
+10000,57.2,knockoff,0
+10000,58.4,knockoff,0
+time for querying 0.4794731140136719
+time for training 51.73020005226135
+10000,knockoff,0.4794731140136719,51.73020005226135
+entropy cost
+11000,knockoff,2061.6178588867188
+gap cost
+11000,knockoff,2571.928970336914
+11000,knockoff,58.24423088500367
+11000,63.6,knockoff,0
+11000,64.9,knockoff,0
+time for querying 0.47966957092285156
+time for training 56.59815454483032
+11000,knockoff,0.47966957092285156,56.59815454483032
+entropy cost
+12000,knockoff,2257.0523681640625
+gap cost
+12000,knockoff,2794.652084350586
+12000,knockoff,62.553807445478505
+12000,62.9,knockoff,0
+12000,63.6,knockoff,0
+time for querying 0.4796719551086426
+time for training 59.093432903289795
+12000,knockoff,0.4796719551086426,59.093432903289795
+entropy cost
+13000,knockoff,2443.6248474121094
+gap cost
+13000,knockoff,3023.0177307128906
+13000,knockoff,67.23600005097649
+13000,60.0,knockoff,0
+13000,61.4,knockoff,0
+time for querying 0.47898030281066895
+time for training 63.66297769546509
+13000,knockoff,0.47898030281066895,63.66297769546509
+entropy cost
+14000,knockoff,2623.6522216796875
+gap cost
+14000,knockoff,3248.857467651367
+14000,knockoff,71.42838370075746
+14000,67.1,knockoff,0
+14000,68.4,knockoff,0
+time for querying 0.4780564308166504
+time for training 66.89694356918335
+14000,knockoff,0.4780564308166504,66.89694356918335
+entropy cost
+15000,knockoff,2816.7378692626953
+gap cost
+15000,knockoff,3481.9330291748047
+15000,knockoff,76.42809450910131
+15000,67.6,knockoff,0
+15000,68.2,knockoff,0
+time for querying 0.4820537567138672
+time for training 72.70482969284058
+15000,knockoff,0.4820537567138672,72.70482969284058
+entropy cost
+16000,knockoff,3006.6917724609375
+gap cost
+16000,knockoff,3713.0084075927734
+16000,knockoff,80.97839989910968
+16000,68.7,knockoff,0
+16000,70.1,knockoff,0
+time for querying 0.4795982837677002
+time for training 75.60727143287659
+16000,knockoff,0.4795982837677002,75.60727143287659
+entropy cost
+17000,knockoff,3194.2042236328125
+gap cost
+17000,knockoff,3941.4484252929688
+17000,knockoff,85.3073526331664
+17000,68.3,knockoff,0
+17000,69.5,knockoff,0
+time for querying 0.4778282642364502
+time for training 80.34533500671387
+17000,knockoff,0.4778282642364502,80.34533500671387
+entropy cost
+18000,knockoff,3381.864288330078
+gap cost
+18000,knockoff,4166.115737915039
+18000,knockoff,89.83249426805929
+18000,67.7,knockoff,0
+18000,69.0,knockoff,0
+time for querying 0.4798448085784912
+time for training 83.5856122970581
+18000,knockoff,0.4798448085784912,83.5856122970581
+entropy cost
+19000,knockoff,3576.341094970703
+gap cost
+19000,knockoff,4393.681777954102
+19000,knockoff,94.19775792283946
+19000,71.1,knockoff,0
+19000,71.9,knockoff,0
+time for querying 0.48246240615844727
+time for training 86.99489951133728
+19000,knockoff,0.48246240615844727,86.99489951133728
+entropy cost
+20000,knockoff,3759.933883666992
+gap cost
+20000,knockoff,4620.818817138672
+20000,knockoff,98.82321132161329
+20000,70.1,knockoff,0
+20000,71.7,knockoff,0
+time for querying 0.48004770278930664
+time for training 93.3890643119812
+20000,knockoff,0.48004770278930664,93.3890643119812
+entropy cost
+21000,knockoff,3953.137725830078
+gap cost
+21000,knockoff,4839.848175048828
+21000,knockoff,103.5352503483238
+21000,70.3,knockoff,0
+21000,71.3,knockoff,0
+time for querying 0.48441338539123535
+time for training 94.91995859146118
+21000,knockoff,0.48441338539123535,94.91995859146118
+entropy cost
+22000,knockoff,4136.208511352539
+gap cost
+22000,knockoff,5055.535552978516
+22000,knockoff,108.63448767571111
+22000,71.8,knockoff,0
+22000,72.6,knockoff,0
+time for querying 0.48140835762023926
+time for training 99.41573715209961
+22000,knockoff,0.48140835762023926,99.41573715209961
+entropy cost
+23000,knockoff,4328.884185791016
+gap cost
+23000,knockoff,5293.556060791016
+23000,knockoff,113.85035958524733
+23000,71.9,knockoff,0
+23000,72.5,knockoff,0
+time for querying 0.48065710067749023
+time for training 104.12379550933838
+23000,knockoff,0.48065710067749023,104.12379550933838
+entropy cost
+24000,knockoff,4521.329925537109
+gap cost
+24000,knockoff,5533.288757324219
+24000,knockoff,119.27549768664073
+24000,73.7,knockoff,0
+24000,74.8,knockoff,0
+time for querying 0.4802403450012207
+time for training 107.38385081291199
+24000,knockoff,0.4802403450012207,107.38385081291199
+entropy cost
+25000,knockoff,4720.233596801758
+gap cost
+25000,knockoff,5776.1197509765625
+25000,knockoff,124.81140749482725
+25000,74.2,knockoff,0
+25000,75.6,knockoff,0
+time for querying 0.47749757766723633
+time for training 111.59144377708435
+25000,knockoff,0.47749757766723633,111.59144377708435
+entropy cost
+26000,knockoff,4918.529373168945
+gap cost
+26000,knockoff,6006.994705200195
+26000,knockoff,129.63091476247914
+26000,73.4,knockoff,0
+26000,74.4,knockoff,0
+time for querying 0.47919416427612305
+time for training 115.10635137557983
+26000,knockoff,0.47919416427612305,115.10635137557983
+entropy cost
+27000,knockoff,5110.713455200195
+gap cost
+27000,knockoff,6245.002914428711
+27000,knockoff,134.55660090289032
+27000,73.6,knockoff,0
+27000,74.7,knockoff,0
+time for querying 0.47953081130981445
+time for training 120.6369879245758
+27000,knockoff,0.47953081130981445,120.6369879245758
+entropy cost
+28000,knockoff,5300.123611450195
+gap cost
+28000,knockoff,6476.659774780273
+28000,knockoff,139.38770429370206
+28000,73.9,knockoff,0
+28000,75.3,knockoff,0
+time for querying 0.48148345947265625
+time for training 123.63554573059082
+28000,knockoff,0.48148345947265625,123.63554573059082
+entropy cost
+29000,knockoff,5489.9208984375
+gap cost
+29000,knockoff,6705.806304931641
+29000,knockoff,144.1612257396906
+29000,71.7,knockoff,0
+29000,72.9,knockoff,0
+time for querying 0.48251986503601074
+time for training 127.5705156326294
+29000,knockoff,0.48251986503601074,127.5705156326294
+entropy cost
+30000,knockoff,5670.079406738281
+gap cost
+30000,knockoff,6924.063415527344
+30000,knockoff,148.22649729338406
+30000,74.1,knockoff,0
+30000,75.5,knockoff,0
+time for querying 0.47954273223876953
+time for training 132.58806252479553
+30000,knockoff,0.47954273223876953,132.58806252479553
+entropy cost
+31000,knockoff,5853.621643066406
+gap cost
+31000,knockoff,7151.789703369141
+31000,knockoff,152.5593795073947
+31000,74.2,knockoff,0
+31000,75.2,knockoff,0
+time for querying 0.47957944869995117
+time for training 136.24998950958252
+31000,knockoff,0.47957944869995117,136.24998950958252
+entropy cost
+32000,knockoff,6039.597412109375
+gap cost
+32000,knockoff,7387.9805908203125
+32000,knockoff,156.95998648295424
+32000,75.3,knockoff,0
+32000,76.5,knockoff,0
+time for querying 0.4806981086730957
+time for training 138.56753158569336
+32000,knockoff,0.4806981086730957,138.56753158569336
+entropy cost
+33000,knockoff,6226.573699951172
+gap cost
+33000,knockoff,7608.94563293457
+33000,knockoff,161.24374774169277
+33000,75.2,knockoff,0
+33000,76.9,knockoff,0
+time for querying 0.4796562194824219
+time for training 145.28204154968262
+33000,knockoff,0.4796562194824219,145.28204154968262
+entropy cost
+34000,knockoff,6411.470932006836
+gap cost
+34000,knockoff,7830.619613647461
+34000,knockoff,166.18563883249533
+34000,75.2,knockoff,0
+34000,76.5,knockoff,0
+time for querying 0.4808056354522705
+time for training 147.14796113967896
+34000,knockoff,0.4808056354522705,147.14796113967896
+entropy cost
+35000,knockoff,6593.6756591796875
+gap cost
+35000,knockoff,8058.494369506836
+35000,knockoff,170.62086148134912
+35000,75.7,knockoff,0
+35000,77.0,knockoff,0
+time for querying 0.47896838188171387
+time for training 151.53558468818665
+35000,knockoff,0.47896838188171387,151.53558468818665
+entropy cost
+36000,knockoff,6785.497985839844
+gap cost
+36000,knockoff,8307.58740234375
+36000,knockoff,175.3677476239396
+36000,75.7,knockoff,0
+36000,76.9,knockoff,0
+time for querying 0.47989416122436523
+time for training 156.52940130233765
+36000,knockoff,0.47989416122436523,156.52940130233765
+entropy cost
+37000,knockoff,6970.807479858398
+gap cost
+37000,knockoff,8531.598175048828
+37000,knockoff,179.71327629077297
+37000,75.2,knockoff,0
+37000,76.3,knockoff,0
+time for querying 0.4792027473449707
+time for training 160.00760221481323
+37000,knockoff,0.4792027473449707,160.00760221481323
+entropy cost
+38000,knockoff,7163.934646606445
+gap cost
+38000,knockoff,8762.870391845703
+38000,knockoff,184.4350789380403
+38000,76.2,knockoff,0
+38000,76.8,knockoff,0
+time for querying 0.47981786727905273
+time for training 163.01836943626404
+38000,knockoff,0.47981786727905273,163.01836943626404
+entropy cost
+39000,knockoff,7349.400497436523
+gap cost
+39000,knockoff,8988.391479492188
+39000,knockoff,189.085092542971
+39000,76.7,knockoff,0
+39000,77.6,knockoff,0
+time for querying 0.4812006950378418
+time for training 167.5545928478241
+39000,knockoff,0.4812006950378418,167.5545928478241
+entropy cost
+40000,knockoff,7542.886779785156
+gap cost
+40000,knockoff,9220.443908691406
+40000,knockoff,193.28880706251036
+40000,77.2,knockoff,0
+40000,78.4,knockoff,0
+time for querying 0.47907280921936035
+time for training 170.622807264328
+40000,knockoff,0.47907280921936035,170.622807264328
+entropy cost
+41000,knockoff,7741.237487792969
+gap cost
+41000,knockoff,9462.251342773438
+41000,knockoff,197.97304339152572
+41000,76.8,knockoff,0
+41000,78.0,knockoff,0
+time for querying 0.4798731803894043
+time for training 176.44516015052795
+41000,knockoff,0.4798731803894043,176.44516015052795
+entropy cost
+42000,knockoff,7930.50244140625
+gap cost
+42000,knockoff,9700.887420654297
+42000,knockoff,202.58612721060976
+42000,76.8,knockoff,0
+42000,78.1,knockoff,0
+time for querying 0.4809532165527344
+time for training 179.80064249038696
+42000,knockoff,0.4809532165527344,179.80064249038696
+entropy cost
+43000,knockoff,8113.631774902344
+gap cost
+43000,knockoff,9937.242630004883
+43000,knockoff,206.7919039540761
+43000,76.3,knockoff,0
+43000,77.6,knockoff,0
+time for querying 0.47972893714904785
+time for training 183.689368724823
+43000,knockoff,0.47972893714904785,183.689368724823
+entropy cost
+44000,knockoff,8306.468872070312
+gap cost
+44000,knockoff,10175.473495483398
+44000,knockoff,211.2143808575453
+44000,77.9,knockoff,0
+44000,79.3,knockoff,0
+time for querying 0.4784877300262451
+time for training 186.90282917022705
+44000,knockoff,0.4784877300262451,186.90282917022705
+entropy cost
+45000,knockoff,8496.242279052734
+gap cost
+45000,knockoff,10398.874404907227
+45000,knockoff,215.5399210903897
+45000,76.6,knockoff,0
+45000,77.7,knockoff,0
+time for querying 0.4793357849121094
+time for training 193.4484670162201
+45000,knockoff,0.4793357849121094,193.4484670162201
+entropy cost
+46000,knockoff,8686.283477783203
+gap cost
+46000,knockoff,10634.500061035156
+46000,knockoff,220.25074262423618
+46000,77.7,knockoff,0
+46000,79.0,knockoff,0
+time for querying 0.48123645782470703
+time for training 196.5211877822876
+46000,knockoff,0.48123645782470703,196.5211877822876
+entropy cost
+47000,knockoff,8889.297119140625
+gap cost
+47000,knockoff,10864.438339233398
+47000,knockoff,224.99305027012286
+47000,77.9,knockoff,0
+47000,79.1,knockoff,0
+time for querying 0.47837185859680176
+time for training 200.0485324859619
+47000,knockoff,0.47837185859680176,200.0485324859619
+entropy cost
+48000,knockoff,9078.029296875
+gap cost
+48000,knockoff,11101.491592407227
+48000,knockoff,229.61418699230308
+48000,78.9,knockoff,0
+48000,80.7,knockoff,0
+time for querying 0.4796333312988281
+time for training 204.19177412986755
+48000,knockoff,0.4796333312988281,204.19177412986755
+entropy cost
+49000,knockoff,9265.61801147461
+gap cost
+49000,knockoff,11327.641632080078
+49000,knockoff,234.09454025641816
+49000,78.8,knockoff,0
+49000,80.6,knockoff,0
+time for querying 0.47934865951538086
+time for training 207.3158085346222
+49000,knockoff,0.47934865951538086,207.3158085346222
+entropy cost
+50000,knockoff,9456.2353515625
+gap cost
+50000,knockoff,11563.298034667969
+50000,knockoff,238.24457324319184
+50000,78.4,knockoff,0
+50000,79.6,knockoff,0
+time for querying 0.47883009910583496
+time for training 210.75599145889282
+50000,knockoff,0.47883009910583496,210.75599145889282
+elapsed time: 6038.865751743317
+

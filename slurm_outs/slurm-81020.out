@@ -1,0 +1,103 @@
+###################################################################
+args: 
+adam_amsgrad :  False
+adaptive_batch_size :  1000
+apply_data_independent_bound :  False
+architectures :  ['MnistNetPate']
+attacker_dataset :  imagenet
+batch_size :  64
+begin_id :  0
+budget :  10.0
+budgets :  [10.0]
+class_type :  multiclass
+commands :  ['basic_model_stealing_attack']
+cwd :  /h/321/scwyllie/model-extraction-iclr
+data_dir :  /h/321/scwyllie/data
+dataset :  mnist
+dataset_type :  balanced
+debug :  False
+device_ids :  [0, 1]
+end_id :  1
+eval_batch_size :  1000
+label_reweight :  disable
+log_every_epoch :  0
+loss_type :  CE
+lr :  0.1
+lr_epochs :  [2]
+lr_factor :  0.1
+lr_mixmatch :  0.002
+mode :  knockoff
+model_size :  small
+momentum :  0.5
+num_epochs :  50
+num_models :  5
+num_optimization_loop :  0
+num_querying_parties :  1
+num_workers :  0
+optimizer :  SGD
+path :  /h/321/scwyllie/model-extraction-iclr
+patience :  None
+poisson_mechanism :  False
+query_set_type :  numpy
+querying_party_ids :  [0, 1, 2]
+retrain_extracted_model :  False
+schedule_factor :  0.1
+schedule_patience :  10
+scheduler_milestones :  None
+scheduler_type :  ReduceLROnPlateau
+seed :  111
+show_dp_budget :  apply
+shuffle_dataset :  False
+sigma_gnmax :  2.0
+sigma_gnmax_private_knn :  28
+sigma_threshold :  0.0
+sigmoid_op :  apply
+target_model :  victim
+test_models_type :  private
+threshold :  0.0
+timestamp :  2023-04-14-15-52-33-645450
+transfer_type :  
+useserver :  False
+verbose :  True
+weight_decay :  0.0001
+ARGS FINISHED
+######################################################
+architecture:  MnistNetPate
+num_models:  5
+args.private_model_path:  /h/321/scwyllie/model-extraction-iclr/private-models/mnist/MnistNetPate/5-models
+args.retrained_private_models_path:  /h/321/scwyllie/model-extraction-iclr/retrained-private-models/mnist/MnistNetPate/5-models/knockoff
+queries,accuracy,type,privacy
+queries,accuracy,type,privacy
+0,10,0,0
+0,10,0,0
+queries,type,entropy
+0,0,0
+queries,type,gap
+0,0,0
+queries,type,pknn
+0,0,0
+args.victim_model_path:  /h/321/scwyllie/model-extraction-iclr/private-models/mnist/MnistNetPate/1-models
+Training adaptive model on 'mnist' dataset!
+Training adaptive model on 'MnistNetPate' architecture!
+Number of private models: 5
+Initial learning rate: 0.1.
+Number of epochs for training each model: 50
+eval dataset:  <torch.utils.data.dataset.Subset object at 0x7f7b7377ea60>
+Label counts for eval set: [ 980, 1135, 1032, 1010,  982,  892,  958, 1028,  974, 1009].
+Class ratios for eval set: [ 9.8 , 11.35, 10.32, 10.1 ,  9.82,  8.92,  9.58, 10.28,  9.74, 10.09].
+Number of eval samples: 10000.
+Loaded stolen model
+Traceback (most recent call last):
+  File "/h/321/scwyllie/model-extraction-iclr/main.py", line 354, in <module>
+    main(args)
+  File "/h/321/scwyllie/model-extraction-iclr/main.py", line 344, in main
+    run_model_extraction(args=args)
+  File "/h/321/scwyllie/model-extraction-iclr/model_extraction/main_model_extraction.py", line 436, in run_model_extraction
+    victim_model, cost_estimator_model = get_victim_model_and_estimator(args)
+  File "/h/321/scwyllie/model-extraction-iclr/model_extraction/main_model_extraction.py", line 292, in get_victim_model_and_estimator
+    cost_estimator = load_private_models(args=args,
+  File "/h/321/scwyllie/model-extraction-iclr/models/load_models.py", line 12, in load_private_models
+    private_model = load_private_model_by_id(
+  File "/h/321/scwyllie/model-extraction-iclr/models/load_models.py", line 62, in load_private_model_by_id
+    raise Exception(
+Exception: Checkpoint file /h/321/scwyllie/model-extraction-iclr/private-models/mnist/MnistNetPate/5-models/checkpoint-model(1).pth.tar does not exist, please generate it via train_private_models(args)!
