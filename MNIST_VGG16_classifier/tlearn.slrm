@@ -1,0 +1,14 @@
+#!/bin/bash
+#SBATCH --account nic
+#SBATCH --job-name=model_extraction_is_sooooo_fun
+#SBATCH --partition nic
+#SBATCH --qos nic
+#SBATCH --gres=gpu:2
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=20GB
+#SBATCH --output=./slurm-%j.out
+#SBACTH --err=slurm-%j.err
+source activate 413Stuff
+python transfer_learning.py 
+conda deactivate
+
